@@ -5768,4 +5768,153 @@
         <br>
     
 
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Chart 1: 中国炼焦煤储量省份分布 (Doughnut Chart)
+        const reserveCtx = document.getElementById('reserveChart');
+        if (reserveCtx) {
+            new Chart(reserveCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['山西省', '贵州省', '安徽省', '河南省', '河北省', '黑龙江省', '其他'],
+                    datasets: [{
+                        data: [45, 12, 10, 8, 5, 3, 17],
+                        backgroundColor: [
+                            '#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ctx.label + ': ' + ctx.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chart 2: 2025年中国炼焦煤进口来源分布 (Pie Chart)
+        const importCtx = document.getElementById('importChart');
+        if (importCtx) {
+            new Chart(importCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['蒙古', '澳大利亚', '俄罗斯', '加拿大', '美国', '其他'],
+                    datasets: [{
+                        data: [55, 20, 15, 7, 3, 0],
+                        backgroundColor: [
+                            '#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#fc8452'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ctx.label + ': ' + ctx.parsed + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Chart 3: 2024-2026年各煤种价格走势对比 (Line Chart)
+        const priceCtx = document.getElementById('priceChart');
+        if (priceCtx) {
+            new Chart(priceCtx, {
+                type: 'line',
+                data: {
+                    labels: ['2024-01', '2024-04', '2024-06', '2024-08', '2024-12', '2025-01', '2025-06', '2025-11', '2025-12', '2026-01', '2026-04', '2026-06'],
+                    datasets: [
+                        {
+                            label: '低硫主焦煤(安泽)',
+                            data: [2550, 1650, 2200, 1650, 1973, 1950, 1000, 1800, 1380, 1800, 1525, 2040],
+                            borderColor: '#5470c6',
+                            backgroundColor: 'rgba(84,112,198,0.1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.3
+                        },
+                        {
+                            label: '高硫主焦煤',
+                            data: [1800, 1200, 1600, 1100, 1420, 1400, 820, 1200, 1100, 1300, 1353, 1729],
+                            borderColor: '#ee6666',
+                            backgroundColor: 'rgba(238,102,102,0.1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.3
+                        },
+                        {
+                            label: '中硫主焦煤',
+                            data: [2000, 1400, 1900, 1300, 1800, 1780, 900, 1400, 1200, 1350, 1416, 1823],
+                            borderColor: '#91cc75',
+                            backgroundColor: 'rgba(145,204,117,0.1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.3
+                        },
+                        {
+                            label: '肥煤',
+                            data: [1800, 1300, 1700, 1200, 1600, 1580, 880, 1300, 1100, 1400, 1500, 1865],
+                            borderColor: '#fac858',
+                            backgroundColor: 'rgba(250,200,88,0.1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'MySteel国产炼焦煤指数',
+                            data: [2000, 1400, 1800, 1350, 1700, 1273, 937, 1407, 1200, 1500, 1600, 1986],
+                            borderColor: '#73c0de',
+                            backgroundColor: 'rgba(115,192,222,0.1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ctx.dataset.label + ': ' + ctx.parsed.y + ' 元/吨';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: { display: true, text: '价格（元/吨）' }
+                        }
+                    }
+                }
+            });
+        }
+    });
+    </script>
+
 </html>
