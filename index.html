@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terry Research - 煤炭行业深度研究平台</title>
+    <title>Terry Research - 行业深度研究平台</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing: border-box; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; 
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -16,7 +16,7 @@
             padding: 20px;
         }
         .container { 
-            max-width: 900px; 
+            max-width: 960px; 
             width: 100%; 
             background: white; 
             border-radius: 20px; 
@@ -59,11 +59,21 @@
             align-items: center;
             gap: 10px;
         }
+        .industry-group {
+            margin-bottom: 40px;
+        }
+        .industry-label {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 15px;
+            padding-left: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         .projects { 
             display: flex; 
             flex-direction: column; 
             gap: 20px; 
-            margin-bottom: 40px;
         }
         .project-card { 
             background: #f8f9fa; 
@@ -121,6 +131,21 @@
             transform: translateY(-2px); 
             box-shadow: 0 5px 15px rgba(24,95,165,0.3);
         }
+        .coming-soon {
+            background: #f0f0f0;
+            border-left-color: #ccc;
+            cursor: default;
+            opacity: 0.7;
+        }
+        .coming-soon:hover {
+            transform: none;
+            box-shadow: none;
+            background: #f0f0f0;
+        }
+        .coming-soon .btn {
+            background: #ccc;
+            cursor: default;
+        }
         .about { 
             background: #f8f9fa; 
             border-radius: 12px; 
@@ -157,8 +182,8 @@
     <div class="container">
         <div class="header">
             <h1>🏠 Terry Research</h1>
-            <p>煤炭行业深度研究平台</p>
-            <p class="subtitle">Coal Industry In-Depth Research Platform</p>
+            <p>行业深度研究平台</p>
+            <p class="subtitle">Multi-Industry In-Depth Research Platform</p>
         </div>
 
         <div class="content">
@@ -167,47 +192,72 @@
                 <span>研究项目</span>
             </div>
 
-            <div class="projects">
-                <!-- 项目1：焦煤 -->
-                <div class="project-card" onclick="window.open('国内优质低硫主焦煤完整报告_2026.html', '_blank')">
-                    <h3>
-                        <span>📈</span>
-                        <span>国内优质低硫主焦煤深度研究</span>
-                    </h3>
-                    <p class="desc">
-                        聚焦国内优质低硫主焦煤行业，深度分析首钢资源（00639.HK）等龙头企业。<br>
-                        包含近五年财务数据、价格敏感性分析、投资建议等完整研究内容。
-                    </p>
-                    <div class="meta">
-                        <span class="tag">📅 2026年6月</span>
-                        <span class="tag">📊 15章完整报告</span>
-                        <span class="tag">📈 首钢资源深度分析</span>
+            <!-- 能源行业 -->
+            <div class="industry-group">
+                <div class="industry-label">⚡ 能源行业 Energy</div>
+                <div class="projects">
+                    <!-- 项目1：焦煤 -->
+                    <div class="project-card" onclick="window.open('国内优质低硫主焦煤完整报告_2026.html', '_blank')">
+                        <h3>
+                            <span>📈</span>
+                            <span>国内优质低硫主焦煤深度研究</span>
+                        </h3>
+                        <p class="desc">
+                            聚焦国内优质低硫主焦煤行业，深度分析首钢资源（00639.HK）等龙头企业。<br>
+                            包含近五年财务数据、价格敏感性分析、投资建议等完整研究内容。
+                        </p>
+                        <div class="meta">
+                            <span class="tag">📅 2026年6月</span>
+                            <span class="tag">📊 15章完整报告</span>
+                            <span class="tag">📈 首钢资源深度分析</span>
+                        </div>
+                        <a href="国内优质低硫主焦煤完整报告_2026.html" class="btn" target="_blank">查看完整报告 →</a>
                     </div>
-                    <a href="国内优质低硫主焦煤完整报告_2026.html" class="btn" target="_blank">查看完整报告 →</a>
-                </div>
 
-                <!-- 项目2：动力煤 -->
-                <div class="project-card" onclick="window.open('国内动力煤完整报告_2026_整合版.html', '_blank')">
-                    <h3>
-                        <span>📉</span>
-                        <span>国内动力煤深度研究</span>
-                    </h3>
-                    <p class="desc">
-                        全面分析国内动力煤行业，覆盖中国神华、陕西煤业、兖矿能源等龙头企业。<br>
-                        包含财务分析、敏感性分析、价格预测、投资建议等完整研究框架。
-                    </p>
-                    <div class="meta">
-                        <span class="tag">📅 2026年6月</span>
-                        <span class="tag">📊 12章完整报告</span>
-                        <span class="tag">📈 多家企业深度分析</span>
+                    <!-- 项目2：动力煤 -->
+                    <div class="project-card" onclick="window.open('国内动力煤完整报告_2026_整合版.html', '_blank')">
+                        <h3>
+                            <span>📉</span>
+                            <span>国内动力煤深度研究</span>
+                        </h3>
+                        <p class="desc">
+                            全面分析国内动力煤行业，覆盖中国神华、陕西煤业、兖矿能源等龙头企业。<br>
+                            包含财务分析、敏感性分析、价格预测、投资建议等完整研究框架。
+                        </p>
+                        <div class="meta">
+                            <span class="tag">📅 2026年6月</span>
+                            <span class="tag">📊 12章完整报告</span>
+                            <span class="tag">📈 多家企业深度分析</span>
+                        </div>
+                        <a href="国内动力煤完整报告_2026_整合版.html" class="btn" target="_blank">查看完整报告 →</a>
                     </div>
-                    <a href="国内动力煤完整报告_2026_整合版.html" class="btn" target="_blank">查看完整报告 →</a>
+                </div>
+            </div>
+
+            <!-- 更多行业（占位，后续添加） -->
+            <div class="industry-group">
+                <div class="industry-label">🏭 更多行业即将上线 More Industries Coming Soon</div>
+                <div class="projects">
+                    <div class="project-card coming-soon">
+                        <h3>
+                            <span>🏗️</span>
+                            <span>待添加研究方向</span>
+                        </h3>
+                        <p class="desc">
+                            如果您有感兴趣的行业或公司，欢迎提供研究方向建议。<br>
+                            后续将持续添加新能源、化工、消费等行业的深度研究报告。
+                        </p>
+                        <div class="meta">
+                            <span class="tag">📅 敬请期待</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn">即将上线 →</a>
+                    </div>
                 </div>
             </div>
 
             <div class="about">
-                <h3>📁 关于本项目</h3>
-                <p><strong>数据来源：</strong>各上市公司年度报告、港交所披露易、Wind数据、券商研报（中金公司、华泰证券等）</p>
+                <h3>📁 关于 Terry Research</h3>
+                <p><strong>平台定位：</strong>聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
                 <p><strong>研究方法：</strong>基于公开的财务数据，结合行业趋势分析，提供价格敏感性分析、投资建议等量化研究内容。</p>
                 <p><strong>更新频率：</strong>根据行业动态和企业财报发布情况，定期更新研究报告。</p>
                 <p><strong>免责声明：</strong>本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
@@ -215,15 +265,15 @@
 
             <div class="about">
                 <h3>📊 数据来源说明</h3>
-                <p>• 财务数据：各公司年度报告（2021-2025年）</p>
+                <p>• 财务数据：各上市公司年度报告（2021-2025年）</p>
                 <p>• 价格数据：Wind、同花顺、新浪财经</p>
-                <p>• 行业数据：国家能源局、中国煤炭工业协会</p>
+                <p>• 行业数据：国家能源局、中国煤炭工业协会等</p>
                 <p>• 券商研报：中金公司、华泰证券、国泰君安等</p>
             </div>
         </div>
 
         <div class="footer">
-            <p>© 2026 Terry Research | 煤炭行业深度研究平台</p>
+            <p>© 2026 Terry Research | 行业深度研究平台</p>
             <p style="margin-top:5px;">本报告仅供学习交流，不构成投资建议</p>
         </div>
     </div>
