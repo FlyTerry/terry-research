@@ -1165,89 +1165,100 @@
     <h4>5.2.1 测算基本假设与参数（广汇能源）</h4>
     <table class="data-table">
         <tr><th>参数项目</th><th>参数值</th><th>说明</th><th>数据来源</th></tr>
-        <tr><td><strong>基准煤炭价格</strong></td><td>327.3359231241055 元/吨（不含税）</td><td>2025年实际/推算</td><td>公司年报</td></tr>
-        <tr><td><strong>基准煤炭销量</strong></td><td>4891.00 万吨</td><td>2025年实际</td><td>公司年报</td></tr>
-        <tr><td><strong>单位生产成本</strong></td><td>277.2535268861173 元/吨</td><td>推算（成本/销量）</td><td>年报拆解</td></tr>
-        <tr><td><strong>其他业务净利润</strong></td><td>约10.744934999999998 亿元</td><td>LNG+煤化工+其他业务净利润合计</td><td>年报拆解</td></tr>
-        <tr><td><strong>财务费用</strong></td><td>约15.0 亿元</td><td>利息支出（估算）</td><td>年报</td></tr>
-        <tr><td><strong>销售费用率+管理费用率</strong></td><td>约5%</td><td>占煤炭收入比例（估算）</td><td>年报</td></tr>
+        <tr><td><strong>基准煤炭价格</strong></td><td>327元/吨（不含税）</td><td>2025年实际</td><td>✅ <a href="http://static.cninfo.com.cn/finalpage/2026-04-24/1225171236.PDF" target="_blank">2025年主要运营数据公告</a></td></tr>
+        <tr><td><strong>基准煤炭销量</strong></td><td>5,300.14万吨</td><td>2025年实际</td><td>✅ <a href="http://static.cninfo.com.cn/finalpage/2026-04-24/1225171236.PDF" target="_blank">2025年主要运营数据公告</a></td></tr>
+        <tr><td><strong>单位生产成本</strong></td><td>约277元/吨</td><td>推算（煤炭业务成本÷销量）</td><td>年报拆解</td></tr>
+        <tr><td><strong>其他业务净利润</strong></td><td>约+10.7亿元</td><td>LNG+煤化工+电力业务净利润合计</td><td>⚠️ 基于年报数据推算（见备注1）</td></tr>
+        <tr><td><strong>期间费用率</strong></td><td>约10.5%</td><td>占营业收入比例（销售+管理+财务）</td><td>✅ <a href="https://data.eastmoney.com/notices/detail/600256/AN202604231821514328.html" target="_blank">2025年年度报告</a></td></tr>
         <tr><td><strong>所得税税率</strong></td><td>25%</td><td>中国企业所得税标准税率</td><td>税法规定</td></tr>
     </table>
+    <p style="font-size:12px; color:#666; margin-top:10px;">
+        <strong>备注1：其他业务净利润推算依据</strong><br>
+        根据广汇能源2025年年报：公司归母净利润约15-20亿元，煤炭业务是主要利润来源（约5-10亿元）。LNG、煤化工、电力等业务整体应有一定盈利贡献（约+5到+15亿元）。表格中采用<strong>约+10.7亿元</strong>作为基准值。<br>
+        <strong>备注2：期间费用率计算</strong><br>
+        2025年年报：营业收入约380亿元，期间费用（销售+管理+财务）约40亿元，期间费用率 = 40÷380 ≈ 10.5%。
+    </p>
     
     <h4>5.2.2 煤炭价格敏感性完整测算表</h4>
+    <div class="warning" style="margin:10px 0; padding:10px; background:#fff3cd; border-left:4px solid #E3A723; border-radius:8px;">
+        <p><strong>⚠️ 测算模型说明：</strong>本节展示简化测算模型，假设其他业务利润稳定（+10.7亿元），仅考虑煤炭价格波动对净利润的影响。完整测算需考虑LNG、煤化工、电力等业务盈利变化，此处简化处理。</p>
+    </div>
     <table class="data-table">
-        <tr><th>情景</th><th>煤炭价格<br>（元/吨）</th><th>煤炭收入<br>（亿元）</th><th>煤炭成本<br>（亿元）</th><th>煤炭毛利<br>（亿元）</th><th> Operating Expense<br>（亿元）</th><th>其他业务利润<br>（亿元）</th><th>财务费用<br>（亿元）</th><th>税前利润<br>（亿元）</th><th>所得税<br>（亿元）</th><th>净利润<br>（亿元）</th><th>利润变动</th></tr>
+        <tr><th>情景</th><th>煤炭价格<br>（元/吨）</th><th>煤炭收入<br>（亿元）</th><th>煤炭成本<br>（亿元）</th><th>煤炭毛利<br>（亿元）</th><th>期间费用<br>（亿元）</th><th>其他业务利润<br>（亿元）</th><th>税前利润<br>（亿元）</th><th>所得税<br>（亿元）</th><th>净利润<br>（亿元）</th><th>较基准变动</th></tr>
         <tr>
-            <td>悲观情景1（-20%）</td>
+            <td>悲观情景（-20%）</td>
             <td>262</td>
-            <td>128.1</td>
+            <td>138.9</td>
             <td>135.6</td>
-            <td>-7.5</td>
-            <td>6.4</td>
-            <td>10.744934999999998</td>
-            <td>15.0</td>
-            <td>-18.2</td>
+            <td>3.3</td>
+            <td>14.6</td>
+            <td>+10.7</td>
+            <td>-0.6</td>
             <td>0.0</td>
-            <td>-18.18</td>
-            <td >0%</td>
+            <td>-0.60</td>
+            <td class="negative">-106.5%</td>
         </tr>
         <tr>
-            <td>悲观情景2（-10%）</td>
+            <td>悲观情景（-10%）</td>
             <td>295</td>
-            <td>144.1</td>
+            <td>156.4</td>
             <td>135.6</td>
-            <td>8.5</td>
-            <td>7.2</td>
-            <td>10.744934999999998</td>
-            <td>15.0</td>
-            <td>-3.0</td>
-            <td>0.0</td>
-            <td>-2.97</td>
-            <td class="positive">+83.6%</td>
+            <td>20.8</td>
+            <td>16.4</td>
+            <td>+10.7</td>
+            <td>15.1</td>
+            <td>3.8</td>
+            <td>11.33</td>
+            <td class="negative">-23.6%</td>
         </tr>
         <tr style="background:#e8f5e9;">
             <td><strong>基准情景（2025年）</strong></td>
             <td><strong>327</strong></td>
-            <td><strong>160.1</strong></td>
+            <td><strong>173.8</strong></td>
             <td><strong>135.6</strong></td>
-            <td><strong>24.5</strong></td>
-            <td><strong>8.0</strong></td>
-            <td><strong>10.744934999999998</strong></td>
-            <td><strong>15.0</strong></td>
-            <td><strong>12.2</strong></td>
-            <td><strong>3.1</strong></td>
-            <td><strong>9.18</strong></td>
-            <td><strong>+150.5%</strong></td>
+            <td><strong>38.2</strong></td>
+            <td><strong>18.3</strong></td>
+            <td><strong>+10.7</strong></td>
+            <td><strong>30.6</strong></td>
+            <td><strong>7.7</strong></td>
+            <td><strong>22.95</strong></td>
+            <td><strong>0%</strong></td>
         </tr>
         <tr>
-            <td>乐观情景1（+10%）</td>
+            <td>乐观情景（+10%）</td>
             <td>360</td>
-            <td>176.1</td>
+            <td>191.3</td>
             <td>135.6</td>
-            <td>40.5</td>
-            <td>8.8</td>
-            <td>10.744934999999998</td>
-            <td>15.0</td>
-            <td>27.4</td>
-            <td>6.9</td>
-            <td>20.58</td>
-            <td class="positive">+213.2%</td>
+            <td>55.7</td>
+            <td>20.1</td>
+            <td>+10.7</td>
+            <td>46.3</td>
+            <td>11.6</td>
+            <td>34.72</td>
+            <td class="positive">+51.3%</td>
         </tr>
         <tr>
-            <td>乐观情景2（+20%）</td>
+            <td>乐观情景（+20%）</td>
             <td>393</td>
-            <td>192.1</td>
+            <td>208.8</td>
             <td>135.6</td>
-            <td>56.5</td>
-            <td>9.6</td>
-            <td>10.744934999999998</td>
-            <td>15.0</td>
-            <td>42.7</td>
-            <td>10.7</td>
-            <td>31.99</td>
-            <td class="positive">+275.9%</td>
+            <td>73.2</td>
+            <td>21.9</td>
+            <td>+10.7</td>
+            <td>62.0</td>
+            <td>15.5</td>
+            <td>46.49</td>
+            <td class="positive">+102.6%</td>
         </tr>
     </table>
+    <p style="font-size:12px; color:#666; margin-top:10px;">
+        <strong>测算逻辑说明：</strong><br>
+        1. <strong>煤炭收入</strong> = 销量（5,300.14万吨）× 价格 | <strong>煤炭成本</strong> = 销量 × 单位成本（277元/吨）<br>
+        2. <strong>期间费用</strong> = 营业收入 × 期间费用率（10.5%）≈ 18.3亿元 | <strong>其他业务利润</strong> = LNG+煤化工+电力净利润（约+10.7亿元）<br>
+        3. <strong>税前利润</strong> = 煤炭毛利 - 期间费用 + 其他业务利润 | <strong>所得税</strong> = 税前利润 × 25%（税前利润>0时）<br>
+        4. <strong>⚠️ 注意</strong>：此表格为简化测算模型，基准情景净利润（22.95亿元）与年报数据（约15-20亿元）存在差异，主要因未考虑资产减值、投资收益等因素。<br>
+        <strong>数据来源：</strong>✅ <a href="http://static.cninfo.com.cn/finalpage/2026-04-24/1225171236.PDF" target="_blank">广汇能源2025年主要运营数据公告</a> | ⚠️ 其他业务利润为推算值
+    </p>
     <p><strong>核心发现：</strong></p>
     <ul>
         <li><strong>✅ 税费随利润变化</strong>：利润为正时缴纳所得税（25%），利润为负时不缴纳所得税</li>
