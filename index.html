@@ -6,7 +6,7 @@
     <title>Terry Research · 中国股票研究平台</title>
     <link rel="stylesheet" href="assets/terry-style.css">
 </head>
-<body class="theme-coal">
+<body class="theme-platform">
 
     <header class="site-header">
         <div class="site-header__inner">
@@ -21,109 +21,95 @@
 
         <!-- 平台概览 hero -->
         <section class="hero">
-            <h1 class="report-title" style="border:none;padding:0;margin:0 0 12px;">Terry Research 研究平台</h1>
-            <p class="report-subtitle" style="margin-bottom:20px;">聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
+            <div class="hero__intro">
+                <h1 class="report-title" style="border:none;padding:0;margin:0 0 12px;">Terry Research 研究平台</h1>
+                <p class="report-subtitle" style="margin-bottom:0;">聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
+            </div>
             <div class="hero__stats">
                 <div class="hero__stat">
-                    <div class="hero__num">15<span>+</span></div>
+                    <div class="hero__num">14</div>
                     <div class="hero__label">深度研究报告</div>
                 </div>
                 <div class="hero__stat">
-                    <div class="hero__num">2</div>
+                    <div class="hero__num">3</div>
                     <div class="hero__label">覆盖行业</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__num">11</div>
+                    <div class="hero__label">成分公司</div>
                 </div>
                 <div class="hero__stat">
                     <div class="hero__num">5<span>年</span></div>
                     <div class="hero__label">财务分析区间</div>
                 </div>
-                <div class="hero__stat">
-                    <div class="hero__num">✅</div>
-                    <div class="hero__label">官方数据核验</div>
-                </div>
             </div>
         </section>
 
-        <p class="report-subtitle" style="margin:24px 0 0;font-size:14px;color:var(--muted);">
-            💡 每个行业报告下均包含其成分公司的独立深度研究，点击行业报告后再下钻查看公司报告。
-        </p>
+        <!-- 行业深度报告入口 -->
+        <section class="section">
+            <h2>行业深度报告</h2>
+            <p class="report-subtitle" style="margin-bottom:0;">每个行业报告下均包含其成分公司的独立深度研究 —— 点击行业报告进入后，可下钻查看公司报告。</p>
 
-        <!-- 煤炭行业 -->
-        <div class="industry-group">
-            <div class="industry-label">⚡ 煤炭行业 Coal Industry</div>
             <div class="projects">
-                <!-- 焦煤行业（入口） -->
-                <div class="project-card">
-                    <h3>📈 国内优质低硫主焦煤深度研究</h3>
-                    <p class="desc">聚焦国内优质低硫主焦煤行业，深度分析首钢资源、嘉友国际、淮北矿业等龙头企业。包含近五年财务数据、价格敏感性分析、投资建议等完整研究内容。</p>
+
+                <!-- 焦煤行业 -->
+                <a class="project-card" href="coking-coal-report.html">
+                    <div class="project-card__head">
+                        <span class="project-card__icon">📈</span>
+                        <span class="tag">煤炭</span>
+                    </div>
+                    <h3>国内优质低硫主焦煤深度研究</h3>
+                    <p class="desc">聚焦国内优质低硫主焦煤行业，覆盖首钢资源、嘉友国际、淮北矿业等龙头企业，含近五年财务、价格敏感性分析与完整研究框架。</p>
                     <div class="meta">
                         <span class="tag">📅 2026年6月</span>
-                        <span class="tag">📊 18章完整报告</span>
+                        <span class="tag">📊 18章</span>
                         <span class="tag">📈 3家成分公司</span>
                     </div>
-                    <a href="coking-coal-report.html" class="btn">查看行业报告 →</a>
-                    <div class="child-reports">
-                        <a class="child-report" href="shougang-report.html"><span class="child-report__name">首钢资源</span><span class="child-report__ticker">00639.HK</span></a>
-                        <a class="child-report" href="jiayou-report.html"><span class="child-report__name">嘉友国际</span><span class="child-report__ticker">603871.SH</span></a>
-                        <a class="child-report" href="huaibei-report.html"><span class="child-report__name">淮北矿业</span><span class="child-report__ticker">600985.SH</span></a>
-                    </div>
-                </div>
+                    <span class="btn">查看行业报告 →</span>
+                </a>
 
-                <!-- 动力煤行业（入口） -->
-                <div class="project-card">
-                    <h3>📉 国内动力煤深度研究</h3>
-                    <p class="desc">全面分析国内动力煤行业，覆盖陕西煤业、兖矿能源、广汇能源等龙头企业。包含财务分析、敏感性分析、价格预测、投资建议等完整研究框架。</p>
+                <!-- 动力煤行业 -->
+                <a class="project-card" href="thermal-coal-report.html">
+                    <div class="project-card__head">
+                        <span class="project-card__icon">📉</span>
+                        <span class="tag">煤炭</span>
+                    </div>
+                    <h3>国内动力煤深度研究</h3>
+                    <p class="desc">全面分析国内动力煤行业，覆盖陕西煤业、兖矿能源、广汇能源等龙头企业，含财务分析、敏感性分析、价格预测与投资建议。</p>
                     <div class="meta">
                         <span class="tag">📅 2026年6月</span>
-                        <span class="tag">📊 12章完整报告</span>
+                        <span class="tag">📊 12章</span>
                         <span class="tag">📈 3家成分公司</span>
                     </div>
-                    <a href="thermal-coal-report.html" class="btn">查看行业报告 →</a>
-                    <div class="child-reports">
-                        <a class="child-report" href="shaanxi-coal-report.html"><span class="child-report__name">陕西煤业</span><span class="child-report__ticker">601225.SH</span></a>
-                        <a class="child-report" href="yankuang-energy-report.html"><span class="child-report__name">兖矿能源</span><span class="child-report__ticker">600188.SH</span></a>
-                        <a class="child-report" href="guanghui-energy-report.html"><span class="child-report__name">广汇能源</span><span class="child-report__ticker">600256.SH</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <span class="btn">查看行业报告 →</span>
+                </a>
 
-        <!-- 有色金属行业 -->
-        <div class="industry-group">
-            <div class="industry-label">🏭 有色金属行业 Non-Ferrous Metals Industry</div>
-            <div class="projects">
-                <!-- 有色金属行业（入口） -->
-                <div class="project-card">
-                    <h3>🏗️ 中国有色金属行业深度研究</h3>
-                    <p class="desc">聚焦 6 种主要有色金属（金、银、铜、锂、铝、锡），深度分析紫金矿业、招金矿业、藏格矿业、兴业银锡、神火股份等龙头企业。包含金属基本面、企业财务、敏感性分析、投资建议等完整内容。</p>
+                <!-- 有色金属行业 -->
+                <a class="project-card" href="nonferrous-metals-report.html">
+                    <div class="project-card__head">
+                        <span class="project-card__icon">🏗️</span>
+                        <span class="tag">有色金属</span>
+                    </div>
+                    <h3>中国有色金属行业深度研究</h3>
+                    <p class="desc">聚焦 6 种主要有色金属（金、银、铜、锂、铝、锡），覆盖紫金矿业、招金矿业、藏格矿业、兴业银锡、神火股份等龙头企业。</p>
                     <div class="meta">
                         <span class="tag">📅 2026年6月</span>
-                        <span class="tag">📊 16章完整报告</span>
+                        <span class="tag">📊 16章</span>
                         <span class="tag">📈 5家成分公司</span>
                     </div>
-                    <a href="nonferrous-metals-report.html" class="btn">查看行业报告 →</a>
-                    <div class="child-reports">
-                        <a class="child-report" href="zijin-mining-report.html"><span class="child-report__name">紫金矿业</span><span class="child-report__ticker">601899.SH</span></a>
-                        <a class="child-report" href="zhaojin-mining-report.html"><span class="child-report__name">招金矿业</span><span class="child-report__ticker">01818.HK</span></a>
-                        <a class="child-report" href="zangge-mining-report.html"><span class="child-report__name">藏格矿业</span><span class="child-report__ticker">000408.SZ</span></a>
-                        <a class="child-report" href="xingye-yintin-report.html"><span class="child-report__name">兴业银锡</span><span class="child-report__ticker">000426.SZ</span></a>
-                        <a class="child-report" href="shenhuo-shares-report.html"><span class="child-report__name">神火股份</span><span class="child-report__ticker">000933.SZ</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <span class="btn">查看行业报告 →</span>
+                </a>
 
-        <!-- 占位行业 -->
-        <div class="industry-group">
-            <div class="industry-label">🏭 更多行业即将上线 More Industries Coming Soon</div>
-            <div class="projects">
-                <div class="project-card is-soon">
-                    <h3>🗂️ 待添加研究方向</h3>
-                    <p class="desc">如果您有感兴趣的行业或公司，欢迎提供研究方向建议。后续将持续添加新能源、化工、消费等行业的深度研究报告。</p>
-                    <div class="meta"><span class="tag">📅 敬请期待</span></div>
-                    <a href="javascript:void(0)" class="btn">即将上线 →</a>
-                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- 更多行业 -->
+        <section class="section">
+            <h2>更多行业即将上线</h2>
+            <div class="box box--note">
+                <p>🗂️ 后续将持续添加新能源、化工、消费等行业的深度研究报告。如有感兴趣的行业或公司，欢迎提供研究方向建议。</p>
+            </div>
+        </section>
 
         <hr class="divider">
 

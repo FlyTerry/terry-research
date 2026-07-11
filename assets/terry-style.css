@@ -66,6 +66,13 @@
   --brand-ink: #1a3e72;
 }
 
+/* 平台首页主题：中性品牌色（石墨蓝灰，不偏向任一行业） */
+.theme-platform {
+  --brand: #34495e;
+  --brand-2: #5d6d7e;
+  --brand-ink: #2c3e50;
+}
+
 /* ---------- 基础重置 ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -534,8 +541,18 @@ tr.total > td:first-child { color: var(--brand-ink); }
   margin: 0 0 14px 4px;
   font-weight: 600;
 }
-.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+/* 首页分节间距 */
+.section { margin: 40px 0 8px; }
+
+.projects { display: grid; gap: 20px; grid-template-columns: 1fr; }
+/* 行业卡列数随屏宽自适应：移动 1 列 → 平板(≥640px) 2 列 → 桌面(≥1000px) 3 列 */
+@media (min-width: 640px)  { .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-left: 5px solid var(--brand);
@@ -544,21 +561,28 @@ tr.total > td:first-child { color: var(--brand-ink); }
   transition: all 0.2s ease;
 }
 .project-card:hover {
-  transform: translateX(4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-sm);
   border-left-color: var(--brand-2);
   background: #fff;
+  text-decoration: none;
 }
+.project-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.project-card__icon { font-size: 26px; line-height: 1; }
 .project-card h3 {
   color: var(--brand-ink);
   font-size: 19px;
   margin: 0 0 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: block;
 }
-.project-card .desc { color: var(--ink-soft); font-size: 14px; line-height: 1.7; margin: 0 0 12px; }
-.project-card .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.project-card .desc { color: var(--ink-soft); font-size: 14px; line-height: 1.7; margin: 0 0 14px; }
+.project-card .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 .project-card .btn {
   display: inline-block;
   padding: 9px 22px;
@@ -569,8 +593,9 @@ tr.total > td:first-child { color: var(--brand-ink); }
   font-weight: 600;
   transition: all 0.2s ease;
 }
-.project-card .btn:hover { background: var(--brand-2); text-decoration: none; transform: translateY(-1px); }
-.project-card.is-soon { opacity: 0.7; border-left-color: var(--border); }
+.project-card:hover .btn { background: var(--brand-2); transform: translateY(-1px); }
+.project-card.is-soon { opacity: 0.7; border-left-color: var(--border); cursor: default; }
+.project-card.is-soon:hover { transform: none; box-shadow: none; background: var(--bg-soft); }
 .project-card.is-soon .btn { background: #c4c9d1; }
 
 /* ---------- 首页：行业报告下嵌套的公司子报告 ---------- */
