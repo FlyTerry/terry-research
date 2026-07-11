@@ -3,267 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>国内动力煤完整报告（2026版）</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #1a1a1a;
-            border-bottom: 4px solid #D85A30;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            font-size: 32px;
-            font-weight: 700;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 26px;
-            font-weight: 600;
-            border-left: 5px solid #D85A30;
-            padding-left: 15px;
-        }
-        
-        h3 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 22px;
-            font-weight: 500;
-        }
-        
-        h4 {
-            color: #555;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 14px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px solid #e0e0e0;
-        }
-        
-        th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-        
-        tr:hover {
-            background-color: #e8f4f8;
-            transition: background-color 0.3s ease;
-        }
-        
-        .chart-container {
-            position: relative;
-            height: 500px;
-            margin: 30px 0 50px 0;
-            padding: 25px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        
-        .chart-container canvas {
-            width: 100% !important;
-            max-height: 420px;
-        }
-        
-        .chart-container h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .data-table-wrapper {
-            overflow-x: auto;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        .data-table {
-            min-width: 800px;
-        }
-        
-        .data-table th {
-            background: linear-gradient(135deg, #534AB7 0%, #185FA5 100%);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        
-        .highlight {
-            background-color: #fff3cd !important;
-            font-weight: 600;
-        }
-        
-        .negative {
-            color: #d93025;
-            font-weight: 600;
-        }
-        
-        .positive {
-            color: #0f9d58;
-            font-weight: 600;
-        }
-        
-        ul, ol {
-            margin-left: 25px;
-            margin-bottom: 15px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .info-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 4px solid #1976d2;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .warning-box {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-            border-left: 4px solid #f57c00;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .toc {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .toc h2 {
-            margin-top: 0;
-            border: none;
-            padding: 0;
-        }
-        
-        .toc ul {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .toc li {
-            padding: 5px 0;
-        }
-        
-        .toc a {
-            color: #1976d2;
-            text-decoration: none;
-        }
-        
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
-            .chart-container {
-                height: 300px;
-                padding: 10px;
-            }
-            
-            table {
-                font-size: 12px;
-            }
-            
-            th, td {
-                padding: 8px 10px;
-            }
-        }
-    </style>
+    <title>国内动力煤完整报告</title>
+        <link rel="stylesheet" href="assets/terry-style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
 </head>
-<body>
-    <div class="container">
-        <h1>国内动力煤行业完整报告（2026版）    </h1>
+<body class="theme-coal">
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-logo" href="index.html">📊 Terry Research</a>
+            <nav class="site-nav">
+                <a href="index.html">首页</a>
+                <span class="site-nav__sep">/</span>
+                <span class="site-nav__current">煤炭行业 · 国内动力煤完整报告（2026版）</span>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <main class="report-layout">
+    <aside class="report-layout__aside">
+        <nav class="toc toc--side">
+  <div class="toc__title">目录</div>
+  <ol><li><a href="#ch1">第1章 行业概况</a></li><li><a href="#ch1-5">第1.5章 数据溯源与口径说明</a></li><li><a href="#ch2">第2章 储量与资源分布</a></li><li><a href="#ch3">第3章 生产与供应</a></li><li><a href="#ch4">第4章 价格分析</a></li><li><a href="#ch5">第5章 消费与需求</a></li><li><a href="#ch6">第6章 运输与物流</a></li><li><a href="#ch7">第7章 政策法规</a></li><li><a href="#ch8">第8章 主要企业分析（12家企业完整版）</a></li><li><a href="#ch9">第9章 投资建议与风险提示</a></li><li><a href="#ch10">第10章 行业数据参考</a></li><li><a href="#ch11">第11章 图表分析</a></li><li><a href="#ch12">第12章 敏感性分析汇总</a></li><li><a href="#ch13">第13章 广汇能源深度研究摘要</a></li><li><a href="#ch14">第14章 兖矿能源深度研究摘要</a></li><li><a href="#ch15">第15章 陕西煤业深度研究摘要</a></li></ol>
+</nav>
+    </aside>
+    <div class="container report-layout__main">
+
+        <h1 class="report-title">国内动力煤行业完整报告</h1>
         
-        <div class="info-box">
+        <div class="box box--info">
             <p><strong>📋 数据来源说明：</strong>本报告所有财务数据均来源于各上市公司2021-2025年官方年报（上交所/深交所），动力煤行业数据来源于中国煤炭工业协会、国家统计局、国家能源局等。<strong>所有数据均基于最新年报和官方数据二次核验</strong>。</p>
             <p><strong>⚠️ 免责声明：</strong>本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
         </div>
         
-        <div style="margin:20px 0; padding:20px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
-            <h3 style="margin-top:0;">📊 数据核验状态总览</h3>
+        <div class="box">
+            <h3>📊 数据核验状态总览</h3>
             <p><strong>本报告承诺所有关键数据均从官方来源获取并交叉核验。</strong></p>
             
-            <div style="margin:15px 0; padding:12px; background:white; border-radius:6px;">
+            <div class="box">
                 <p><strong>核验状态说明：</strong></p>
-                <ul style="margin:5px 0 5px 20px; font-size:13px;">
+                <ul>
                     <li>✅ <strong>已核验</strong>：数据已从官方年报/官网直接获取并核对</li>
                     <li>⚠️ <strong>估算数据</strong>：基于年报营业收入/销量拆解的估算值，已标注估算依据</li>
                     <li>🔄 <strong>交叉验证</strong>：多个官方来源交叉验证一致</li>
                 </ul>
             </div>
             
-            <div style="margin:15px 0; padding:12px; background:white; border-radius:6px;">
+            <div class="box">
                 <p><strong>官方数据来源：</strong></p>
-                <ul style="margin:5px 0 5px 20px; font-size:13px;">
+                <ul>
                     <li>✅ 中国煤炭工业协会</li>
                     <li>✅ 国家统计局、国家能源局</li>
                     <li>✅ 各上市公司2021-2025年年度报告</li>
@@ -274,29 +64,7 @@
         </div>
         
         <div class="toc">
-            <h2>目录</h2>
-            <ul>
-                <li><a href="#chapter1">第1章 行业概况</a></li>
-                <li><a href="#chapter1-5">第1.5章 数据溯源与口径说明</a></li>
-                <li><a href="#chapter2">第2章 储量与资源分布</a></li>
-                <li><a href="#chapter3">第3章 生产与供应</a></li>
-                <li><a href="#chapter4">第4章 价格分析</a></li>
-                <li><a href="#chapter5">第5章 消费与需求</a></li>
-                <li><a href="#chapter6">第6章 运输与物流</a></li>
-                <li><a href="#chapter7">第7章 政策法规</a></li>
-                <li><a href="#chapter8">第8章 主要企业分析</a></li>
-                <li><a href="#chapter9">第9章 投资建议与风险提示</a></li>
-                <li><a href="#chapter10">第10章 数据附录</a></li>
-                <li><a href="#chapter11">第11章 图表分析</a></li>
-                <li><a href="#chapter12">第12章 敏感性分析</a></li>
-            
-                <li><a href="#chapter13">第13章 广汇能源深度研究摘要</a></li>
-                <li><a href="#chapter14">第14章 兖矿能源深度研究摘要</a></li>
-                <li><a href="#chapter15">第15章 陕西煤业深度研究摘要</a></li>
-</ul>
-        </div>
-        
-        <h2 id="chapter1">第1章 行业概况</h2>
+            <h2 id="ch1">第1章 行业概况</h2>
         
         <h3>1.1 动力煤定义与分类</h3>
         
@@ -323,7 +91,7 @@
             <li><strong>长协占比高</strong>：重点电企长协签约率≥75%</li>
         </ul>
         
-        <h2 id="chapter1-5">第1.5章 数据溯源与口径说明 ⚠️ 重要</h2>
+        <h2 id="ch1-5">第1.5章 数据溯源与口径说明</h2>
         
         <h3>1.5.1 数据来源</h3>
         <table>
@@ -430,7 +198,7 @@
         </table>
         
         <h3>1.5.4 数据质量声明</h3>
-        <div class="warning-box">
+        <div class="box box--warning">
             <p><strong>⚠️ 重要说明：</strong></p>
             <ul>
                 <li>本报告部分数据为推算值，非企业官方披露，仅供参考</li>
@@ -440,7 +208,7 @@
             </ul>
         </div>
         
-        <h2 id="chapter2">第2章 储量与资源分布</h2>
+        <h2 id="ch2">第2章 储量与资源分布</h2>
         
         <h3>2.1 全国储量概况</h3>
         
@@ -491,7 +259,7 @@
             <li>优质动力煤（低硫、高发热量）主要集中在陕北、蒙西</li>
         </ul>
         
-        <h2 id="chapter3">第3章 生产与供应</h2>
+        <h2 id="ch3">第3章 生产与供应</h2>
         
         <h3>3.1 全国产量数据</h3>
         
@@ -597,7 +365,7 @@
             <li>中东部省份产量持续下降（资源枯竭、去产能）</li>
         </ul>
         
-        <h2 id="chapter4">第4章 价格分析</h2>
+        <h2 id="ch4">第4章 价格分析</h2>
         
         <h3>4.1 价格走势（2024-2026年）</h3>
         
@@ -720,7 +488,7 @@
             <li><strong>标杆作用</strong>：5500大卡是市场主流标的，秦皇岛港平仓价是行业风向标</li>
         </ul>
         
-        <h2 id="chapter5">第5章 消费与需求</h2>
+        <h2 id="ch5">第5章 消费与需求</h2>
         
         <h3>5.1 分行业消费需求</h3>
         <table>
@@ -830,7 +598,7 @@
         </table>
         <p><strong>⚠️ 数据解读：</strong>2025年产量增、消费降，主要受新能源替代和宏观经济转型影响，库存消耗较大。</p>
         
-        <h2 id="chapter6">第6章 运输与物流</h2>
+        <h2 id="ch6">第6章 运输与物流</h2>
         <p>动力煤运输呈现"西煤东运"、"北煤南运"格局，主要依赖铁路+港口中转。</p>
         
         <h3>6.1 "西煤东运"主要线路</h3>
@@ -945,13 +713,13 @@
         </table>
         <p><strong>核心结论：</strong>疆煤外运成本比晋陕蒙高200-250元/吨，制约其市场竞争力，主要服务西北本地市场。</p>
         
-        <h2 id="chapter7">第7章 政策法规</h2>
+        <h2 id="ch7">第7章 政策法规</h2>
         <p>保供稳价、环保政策对行业影响深远。</p>
         
         
     
     
-    <h2 id="chapter8">第8章 主要企业分析（12家企业完整版）</h2>
+    <h2 id="ch8">第8章 主要企业分析（12家企业完整版）</h2>
     <p>本章为所有12家主要上市煤炭企业提供完整分析，包含2024-2025年真实财务数据、产量销量数据、敏感性分析（含推算公式）和2026年预测。</p>
 
         <h3>8.1 中国神华 (601088.SH)</h3>
@@ -4442,14 +4210,14 @@
         </table>
 
 
-        <h2 id="chapter9">第9章 投资建议与风险提示</h2>
+        <h2 id="ch9">第9章 投资建议与风险提示</h2>
         <p>详细投资建议请参见各企业分析。</p>
         
         <hr>
         
     
     
-    <h2 id="chapter10">第10章 行业数据参考</h2>
+    <h2 id="ch10">第10章 行业数据参考</h2>
     <p>本章提供煤炭行业的关键数据参考，包括价格、产量、销量等。</p>
     
     <h3>10.1 2024-2025年煤炭价格走势</h3>
@@ -4657,7 +4425,7 @@
     </ul>
 </div>
 
-    <h2 id="chapter11">第11章 图表分析</h2>
+    <h2 id="ch11">第11章 图表分析</h2>
     <p>本章通过图表形式展示行业和企业关键数据。</p>
     
     <h3>11.1 12家企业2025年净利润对比（亿元）</h3>
@@ -4708,7 +4476,7 @@
         </tbody>
     </table>
 
-    <h2 id="chapter12">第12章 敏感性分析汇总</h2>
+    <h2 id="ch12">第12章 敏感性分析汇总</h2>
     <p>本章汇总12家企业的敏感性分析结果，展示煤价波动对利润的影响。</p>
     <p><strong>⚠️ 特别注意：神火股份为煤铝双主业，利润受铝价影响显著大于煤价，详见第8.12.2节双因素模型。</strong></p>
     
@@ -5141,7 +4909,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-    <h2 id="chapter13">第13章 广汇能源深度研究摘要</h2>
+    <h2 id="ch13">第13章 广汇能源深度研究摘要</h2>
     <div class="info" style="margin:20px 0; padding:15px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
         <p><strong>📋 数据来源说明：</strong>本章汇总《广汇能源深度研究报告（2021-2025年）》核心发现。所有财务数据均来源于广汇能源官方年报（巨潮资讯网），增量项目信息来源于新疆维吾尔自治区应急管理厅、江苏省发改委、广汇能源官方公告等。完整报告请参见<a href="guanghui-energy-report.html" target="_blank">《广汇能源深度研究报告（2021-2025年）》</a>。</p>
     </div>
@@ -5230,7 +4998,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    <h2 id="chapter14">第14章 兖矿能源深度研究摘要</h2>
+    <h2 id="ch14">第14章 兖矿能源深度研究摘要</h2>
     <div class="info" style="margin:20px 0; padding:15px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
         <p><strong>📋 数据来源说明：</strong>本章汇总《兖矿能源深度研究报告（2021-2025年）》核心发现。所有财务数据均来源于兖矿能源官方年报（巨潮资讯网），增量项目信息来源于公司官方公告、发改委批复等。<strong>2025年产量数据已根据公司2025年年度报告（2026年3月27日）修正为18,200万吨</strong>。完整报告请参见<a href="yankuang-energy-report.html" target="_blank">《兖矿能源深度研究报告（2021-2025年）》</a>。</p>
     </div>
@@ -5297,7 +5065,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
     <hr style="margin:40px 0;">
 
-    <h2 id="chapter15">第15章 陕西煤业深度研究摘要</h2>
+    <h2 id="ch15">第15章 陕西煤业深度研究摘要</h2>
     <div class="info" style="margin:20px 0; padding:15px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
         <p><strong>📋 数据来源说明：</strong>本章汇总《陕西煤业深度研究报告（2021-2025年）》核心发现。所有财务数据均来源于陕西煤业官方年报（巨潮资讯网），增量项目信息来源于公司官方公告、发改委批复等。<strong>2025年产量数据已根据公司2025年主要运营数据公告（2026年1月7日）修正为17,490.56万吨</strong>。完整报告请参见<a href="shaanxi-coal-report.html" target="_blank">《陕西煤业深度研究报告（2021-2025年）》</a>。</p>
     </div>
@@ -5367,5 +5135,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
     </div>
     <hr style="margin:40px 0;">
+
+    <hr class="divider">
+        </div>
+</main>
+
+    <footer class="site-footer">
+        <p>© 2026 Terry Research</p>
+        <p>数据来源：公司年度报告等官方渠道</p>
+        <p>本报告基于公开资料整理，仅供学习交流，不构成任何投资建议。投资有风险，入市需谨慎。</p>
+    </footer>
+
+
+<div class="read-progress" aria-hidden="true"></div>
+<button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script src="assets/app.js"></script>
 </body>
 </html>

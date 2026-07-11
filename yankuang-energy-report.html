@@ -2,42 +2,38 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>兖矿能源深度研究报告（2021-2025年）</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f5f5; color: #333; line-height: 1.8; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; }
-        h1 { color: #D85A30; border-bottom: 3px solid #D85A30; padding-bottom: 15px; margin-bottom: 10px; font-size: 28px; }
-        h2 { color: #0F6E56; margin-top: 40px; margin-bottom: 20px; border-left: 5px solid #0F6E56; padding-left: 15px; font-size: 22px; }
-        h3 { color: #185FA5; margin-top: 30px; margin-bottom: 15px; font-size: 18px; }
-        h4 { color: #333; margin-top: 20px; margin-bottom: 10px; font-size: 16px; }
-        h5 { color: #666; margin-top: 15px; margin-bottom: 8px; font-size: 14px; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-        th, td { padding: 10px 12px; border: 1px solid #ddd; text-align: center; }
-        th { background: #f8f9fa; font-weight: 600; }
-        tr:hover { background: #f8f9fa; }
-        .positive { color: #0F6E56; font-weight: 600; }
-        .negative { color: #DC3545; font-weight: 600; }
-        .highlight { background: #fff3cd; }
-        .chart-container { margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; height: 400px; }
-        .warning { background: #fff3cd; padding: 15px; border-radius: 8px; border-left: 4px solid #E3A723; margin: 15px 0; }
-        .info { background: #d1ecf1; padding: 15px; border-radius: 8px; border-left: 4px solid #185FA5; margin: 15px 0; }
-        .coal { color: #D85A30; }
-        .gas { color: #0F6E56; }
-        .chemical { color: #185FA5; }
-        .power { color: #E3A723; }
-        ul { margin: 10px 0 10px 30px; }
-        li { margin: 5px 0; }
-        .summary-box { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .data-table td, .data-table th { text-align: left; padding: 8px 12px; }
-        .data-table th { text-align: center; }
-    </style>
+    <title>兖矿能源深度研究报告（2021–2025年）</title>
+        <link rel="stylesheet" href="assets/terry-style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.js"></script>
+    
 </head>
-<body>
-<div class="container">
-    <h1>兖矿能源（600188.SH / 01171.HK）深度研究报告</h1>
-    <p style="color:#666; margin-bottom:30px;">研究周期：2021-2025年（近五年）｜报告日期：2026年6月</p>
+<body class="theme-coal">
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-logo" href="index.html">📊 Terry Research</a>
+            <nav class="site-nav">
+                <a href="index.html">首页</a>
+                <span class="site-nav__sep">/</span>
+                <a href="thermal-coal-report.html">动力煤行业</a>
+                <span class="site-nav__sep">/</span>
+                <span class="site-nav__current">兖矿能源深度研究报告（2021–2025年）</span>
+            </nav>
+        </div>
+    </header>
+
+    
+
+<main class="report-layout">
+    <aside class="report-layout__aside">
+        <nav class="toc toc--side">
+  <div class="toc__title">目录</div>
+  <ol><li><a href="#ch1">第一章 公司概况与业务结构</a></li><li><a href="#ch2">第二章 近五年财务数据分析（2021-2025年）</a></li><li><a href="#ch3">第三章 分产品产量、收入、毛利分析（2021-2025年）</a></li><li><a href="#ch4">第四章 主要增量项目分析</a></li><li><a href="#ch5">第五章 价格敏感性分析</a></li><li><a href="#ch6">第六章 投资价值分析</a></li></ol>
+</nav>
+    </aside>
+    <div class="container report-layout__main">
+
+    <h1 class="report-title">兖矿能源（600188.SH / 01171.HK）深度研究报告</h1>
+    <p style="color:#666; margin-bottom:30px;">研究周期：2021-2025年（近五年）｜报告更新：2026年7月（含雪球《山东的煤以及兖矿能源》数据）</p>
 
     <div class="summary-box">
         <h3>核心结论摘要</h3>
@@ -84,7 +80,7 @@
         </div>
     </div>
 
-    <h2>第一章 公司概况与业务结构</h2>
+    <h2 id="ch1">第一章 公司概况与业务结构</h2>
     
     <h3>1.1 公司简介</h3>
     <table>
@@ -137,7 +133,92 @@
         </tbody>
     </table>
 
-    <h2>第二章 近五年财务数据分析（2021-2025年）</h2>
+    <h3>1.3 历史沿革与战略演变</h3>
+
+    <div class="info" style="margin:20px 0; padding:15px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 本节数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>（2026年7月）、兖矿能源年度报告及公开公告。</p>
+    </div>
+
+    <p>兖矿能源的历史是一部<strong>"跨省出海、并购扩张"</strong>的成长史。作为山东省属国企，在省内资源禀赋不占优势的背景下，依靠先发优势和资本运作，走出了一条独特的扩张路径。</p>
+
+    <h4>1.3.1 关键历史节点</h4>
+    <table class="data-table">
+        <tr><th>时间</th><th>事件</th><th>战略意义</th></tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>1976年</strong></td>
+            <td>兖州矿务局成立</td>
+            <td>公司前身，扎根山东济宁矿区</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>1997–1998年</strong></td>
+            <td>H股上市（1997）+ A股上市（1998）</td>
+            <td><strong>国内煤炭企业最早一批上市</strong>，在煤炭黄金十年开幕前夜即获得资本市场融资</td>
+        </tr>
+        <tr>
+            <td><strong>1990年代末</strong></td>
+            <td>进入陕西榆林、内蒙古鄂尔多斯拿矿</td>
+            <td><strong>国内煤企第一批跨省拿大矿的弄潮儿</strong>，比陕煤化整合成型（2006年）早了近十年</td>
+        </tr>
+        <tr>
+            <td><strong>2002年前后</strong></td>
+            <td>陕蒙基地具备雏形</td>
+            <td>在神华、伊泰等巨头密集布局的神东地区站稳脚跟</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>2004年</strong></td>
+            <td>收购澳洲南田煤矿</td>
+            <td><strong>中国煤企最早一批海外并购</strong>，开启国际化布局</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>2011年</strong></td>
+            <td>在陕西榆林布局未来能源煤化工平台</td>
+            <td>煤制油项目落地，2015年底产出合格柴油和石脑油</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>2017年</strong></td>
+            <td>兖煤澳洲以24.5亿美元收购力拓联合煤炭</td>
+            <td><strong>中国煤企史上最大海外并购之一</strong>，兖煤澳洲一跃成为澳洲最大煤矿企业</td>
+        </tr>
+        <tr>
+            <td><strong>2020年</strong></td>
+            <td>原山东能源集团与原兖矿集团合并重组</td>
+            <td>新山能集团煤炭产量跃居全国第二，为上市公司后续资产注入奠定基础</td>
+        </tr>
+        <tr>
+            <td><strong>2022年</strong></td>
+            <td>澳煤+陕蒙续建产能释放</td>
+            <td>商品煤产量从约1亿吨跃升至约1.3亿吨</td>
+        </tr>
+        <tr>
+            <td><strong>2024年</strong></td>
+            <td>并表鲁西矿业+新疆能化</td>
+            <td>商品煤产量增至约1.7亿吨</td>
+        </tr>
+        <tr style="background:#d1ecf1;">
+            <td><strong>2025年</strong></td>
+            <td>收购西北矿业51%股权并表</td>
+            <td>商品煤产量增至1.82亿吨；西北矿业含淄矿、临矿、新安等原山能集团在甘陕蒙的煤矿产能</td>
+        </tr>
+        <tr style="background:#d1ecf1;">
+            <td><strong>2026年</strong></td>
+            <td>兖煤澳洲以18.5亿美元收购红隼煤矿80%股权</td>
+            <td>进一步扩大澳洲产能布局</td>
+        </tr>
+    </table>
+
+    <h4>1.3.2 扩张逻辑解读</h4>
+    <p>兖矿能源的成长路径可概括为<strong>"天时+人和"弥补"地利"不足</strong>：</p>
+    <ul>
+        <li><strong>天时：上市早，资金充裕</strong>——1997/1998年即实现H+A两地上市，在煤炭黄金十年（1998–2012）开幕前夜拿到资本市场的"启动资金"，好比"玩大富翁游戏开局比别人钱多，路过好地皮就能先买"</li>
+        <li><strong>人和：技术+资本驱动扩张</strong>——山东是东部发达省份，煤炭开采历史久、技术积累深厚，"有钱又有技术"，省外拿矿的节奏比安徽、河南等省属国资早了近十年</li>
+        <li><strong>地利不足：山东本部资源禀赋有限</strong>——鲁西基地虽属十四大煤炭基地之一，但定位是"老矿区接续"，远不如晋蒙陕新的资源条件</li>
+    </ul>
+    <p><strong>产量增长轨迹：</strong>2021年以前商品煤产量约1亿吨 → 2022年约1.3亿吨（澳煤+陕蒙续建） → 2024年约1.7亿吨（并表鲁西+新疆能化） → 2025年1.82亿吨（并表西北矿业）。可以说，2020年原山能与原兖矿的合并重组，对上市公司的成长性助力巨大。</p>
+
+    <h4>1.3.3 控股股东背景</h4>
+    <p>山东能源集团是兖矿能源的控股股东，2025年集团煤炭产量<strong>2.8亿吨</strong>，仅次于国家能源集团（神华母公司，6.1亿吨）和晋能控股（4亿吨），高于中煤集团（2.7亿吨）和陕煤集团（2.6亿吨），位居<strong>全国前三、全球前列</strong>。集团山东本部产量约0.84亿吨，其余约2亿吨来自省外煤矿，计划"十五五"提升至3.5亿吨。兖矿能源作为集团煤炭业务的上市平台，是集团产能扩张和资产证券化的核心载体。</p>
+
+    <h2 id="ch2">第二章 近五年财务数据分析（2021-2025年）</h2>
     
     <div class="warning" style="margin:15px 0; padding:15px; background:#fff3cd; border-left:4px solid #E3A723; border-radius:8px;">
         <p><strong>📋 数据来源与核验状态说明：</strong></p>
@@ -290,7 +371,116 @@
         <li><strong>自由现金流2025年转负</strong>：主要因煤价下行导致经营性现金流减少</li>
     </ul>
 
-    <h2>第三章 分产品产量、收入、毛利分析（2021-2025年）</h2>
+    <h3>2.4 少数股东权益与归母净利分析</h3>
+
+    <div class="info" style="margin:15px 0; padding:12px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>、兖矿能源年度报告。本节部分数据为第三方研究视角的交叉验证，与年报披露口径可能存在细微差异。</p>
+    </div>
+
+    <p><strong>兖矿能源的一个重要特征是少数股东权益占比极大</strong>，这使得并表产能和营收虽大，但归母净利润"打很大折扣"。</p>
+
+    <h4>2.4.1 主要子公司权益结构（2025年）</h4>
+    <table class="data-table">
+        <tr><th>子公司/业务主体</th><th>上市公司持股比例</th><th>少数股东权益占比</th><th>2025年产量贡献</th><th>说明</th></tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>西北矿业</strong></td>
+            <td><strong>51%</strong></td>
+            <td>49%</td>
+            <td>约3,381万吨</td>
+            <td>2025年新并表，含淄矿、临矿、新安等原山能集团在甘陕蒙煤矿</td>
+        </tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>新疆能化</strong></td>
+            <td><strong>51%</strong></td>
+            <td>49%</td>
+            <td>约3,050万吨</td>
+            <td>2024年并表，产能高但利润被大幅稀释</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>鲁西矿业</strong></td>
+            <td><strong>51%</strong></td>
+            <td>49%</td>
+            <td>纳入山东基地合计</td>
+            <td>单吨毛利高达314元，盈利能力强，但权益占比低</td>
+        </tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>未来能源</strong></td>
+            <td><strong>74%</strong></td>
+            <td>26%</td>
+            <td>约1,600万吨（金鸡滩矿）</td>
+            <td>陕蒙基地核心盈利主体，单吨毛利346元</td>
+        </tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>兖煤澳洲</strong></td>
+            <td><strong>约62%</strong></td>
+            <td>约38%</td>
+            <td>约5,700万吨（权益）</td>
+            <td>港股独立上市（03668.HK），澳洲最大煤矿企业</td>
+        </tr>
+    </table>
+
+    <p><strong>核心结论：</strong></p>
+    <ul>
+        <li><strong>并表与归母差距大</strong>：上市公司并表的煤炭产量、营收和利润规模很大，但产量多的（西北矿业、新疆能化）和盈利好的（鲁西矿业）都只有51%权益，到了归母净利润层面要"打很大的折扣"</li>
+        <li><strong>少数股东损益侵蚀严重</strong>：按2025年归母净利润约84亿元估算，少数股东损益占比约45%，意味着公司约一半利润归属于少数股东</li>
+        <li><strong>"算账"复杂度高</strong>：如果要精准估算兖矿能源的合理估值，需要"一个一个矿去盘它的成本、产能和资本开支，再考虑权益占比"，计算器会相当复杂</li>
+    </ul>
+
+    <h3>2.5 资本开支趋势分析</h3>
+
+    <p>兖矿能源在行业景气周期赚到的钱，<strong>主要拿去扩张而非还债和分红</strong>，这是理解公司财务特征的关键逻辑。</p>
+
+    <h4>2.5.1 资产扩张路径（2020–2025年）</h4>
+    <table class="data-table">
+        <tr><th>指标</th><th>2020年</th><th>2025年</th><th>增幅</th><th>说明</th></tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>总资产</strong></td>
+            <td>约2,589亿</td>
+            <td>约4,529亿</td>
+            <td class="positive">+75%</td>
+            <td>多次并购并表驱动</td>
+        </tr>
+        <tr>
+            <td><strong>固定资产</strong></td>
+            <td>约669亿</td>
+            <td>约1,421亿</td>
+            <td class="positive">+112%</td>
+            <td>煤矿及化工资产大幅增长</td>
+        </tr>
+        <tr>
+            <td><strong>无形资产</strong></td>
+            <td>约589亿</td>
+            <td>约1,032亿</td>
+            <td class="positive">+75%</td>
+            <td>主要为采矿权增加</td>
+        </tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>有息负债</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td>不降反升</td>
+            <td>扩张主导，非去杠杆</td>
+        </tr>
+    </table>
+    <p style="font-size:12px; color:#666; margin-top:8px;">
+        <em>数据来源：</em>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>，基于兖矿能源年报数据。注：此处为第三方研究口径，上表2.2中2025年总资产为年报合并口径3,521亿元，差异源于统计口径不同。
+    </p>
+
+    <h4>2.5.2 资本开支明细与展望</h4>
+    <table class="data-table">
+        <tr><th>年份</th><th>资本开支（亿元）</th><th>主要投向</th><th>维持性vs扩张性</th></tr>
+        <tr><td>2025年</td><td>约221</td><td>公司本部24亿（维持）、鲁南化工15亿、西北矿业22亿、鄂尔多斯29亿（烯烃）、新疆能化31亿（扩张）</td><td>维持/扩张约各半</td></tr>
+        <tr style="background:#e8f5e9;"><td><strong>2026年（预计）</strong></td><td><strong>约198</strong></td><td>维简83亿 + 安全生产20亿 + 基建94亿</td><td><strong>维持约52%、扩张约48%</strong></td></tr>
+    </table>
+
+    <p><strong>核心判断：</strong></p>
+    <ul>
+        <li><strong>资本开支趋势性下降</strong>：从2025年的221亿降至2026年预计198亿，远期有望进一步收窄</li>
+        <li><strong>行业景气期选择扩张而非降债</strong>：2022年经营性现金流高达589亿，但公司选择将资金投向固定资产和无形资产（接近翻倍），有息负债不降反升</li>
+        <li><strong>离"红利股"还差一轮景气周期</strong>：兖矿能源目前仍处于"成长扩张期"，要转型为低负债、高分红的红利股，"可能还需要再经历一轮煤炭景气周期"</li>
+    </ul>
+
+    <h2 id="ch3">第三章 分产品产量、收入、毛利分析（2021-2025年）</h2>
 
     <h3>3.1 煤炭业务分析</h3>
     
@@ -542,6 +732,71 @@
     
     <p><strong>权益产量说明：</strong>2025年商品煤产量1.82亿吨中，权益产量约1.26亿吨（权益比例约69.2%），主要因兖煤澳洲等非全资控股子公司的产量并表但不完全权益。</p>
 
+    <h3>3.1.5 分区域产能与盈利分析（2025年）</h3>
+
+    <div class="info" style="margin:15px 0; padding:12px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 核心数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>（2026年7月）。该文将兖矿比作"<strong>全球煤炭ETF</strong>"，产能分布分散，不同区域盈利能力差异显著。</p>
+    </div>
+
+    <p>兖矿能源的煤炭产能分布于山东、陕蒙、新疆、澳洲和西北（甘陕蒙）五大基地，各区域的售价、成本和单吨毛利差异巨大，理解这一差异是分析公司盈利结构的关键。</p>
+
+    <table class="data-table">
+        <tr><th>区域基地</th><th>2025年产量概况</th><th>煤质/产品特点</th><th>售价水平</th><th>成本水平</th><th>单吨毛利</th><th>核心点评</th></tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>山东基地</strong><br>（含鲁西矿业）</td>
+            <td>合计约5,615万吨产能</td>
+            <td>炼焦煤、精煤占比高</td>
+            <td>🔥🔥🔥 高<br>走焦煤定价体系</td>
+            <td>💰💰 中高<br>井工开采，约450–550元/吨</td>
+            <td><strong>高</strong><br>鲁西矿业单吨毛利约314元</td>
+            <td><strong>现金牛</strong>：精煤占比高，售价最高，是公司利润基石。但鲁西矿业仅51%权益</td>
+        </tr>
+        <tr style="background:#e8f5e9;">
+            <td><strong>陕蒙基地</strong><br>（含未来能源）</td>
+            <td>约5,800万吨<br>（4对千万吨级矿井）</td>
+            <td>动力煤+化工煤<br>5,500–6,000大卡</td>
+            <td>🔥🔥 中高<br>化工煤溢价明显</td>
+            <td>💰 低<br>露天+井工，约280–350元/吨</td>
+            <td><strong>最高</strong><br>未来能源单吨毛利约346元</td>
+            <td><strong>盈利引擎</strong>：成本低+化工煤溢价，是公司盈利质量最好的区域。未来能源仅74%权益</td>
+        </tr>
+        <tr>
+            <td><strong>西北矿业</strong><br>（甘陕蒙）</td>
+            <td>约3,381万吨<br>（2025年新并表）</td>
+            <td>动力煤为主</td>
+            <td>🔥🔥 中等</td>
+            <td>💰 中低</td>
+            <td><strong>中等</strong></td>
+            <td><strong>增量潜力</strong>：甘肃有几个矿在建，未来有望贡献增量。仅51%权益</td>
+        </tr>
+        <tr>
+            <td><strong>澳洲基地</strong><br>（兖煤澳洲）</td>
+            <td>约5,700万吨（权益）</td>
+            <td>炼焦煤+动力煤<br>出口日韩、东南亚</td>
+            <td>🔥🔥🔥 高<br>出口价含海运费</td>
+            <td>💰💰💰 高<br>澳洲人工+政策成本高，约400–500元/吨</td>
+            <td><strong>中高</strong></td>
+            <td><strong>国际化对冲</strong>：澳洲最大煤矿企业，2017年24.5亿美元收购力拓联合煤炭。约62%权益</td>
+        </tr>
+        <tr style="background:#fff3e0;">
+            <td><strong>新疆基地</strong></td>
+            <td>约3,050万吨产能</td>
+            <td>动力煤</td>
+            <td>🔥 低<br>运距劣势严重</td>
+            <td>💰 极低<br>露天开采</td>
+            <td><strong>低</strong></td>
+            <td><strong>运费是硬伤</strong>：按0.20元/公里·吨算，2,000公里运费就达400元/吨。新疆煤出路在煤化工转化（赚运费差）</td>
+        </tr>
+    </table>
+
+    <p><strong>核心规律：产地决定盈利</strong></p>
+    <ul>
+        <li><strong>煤种×产地</strong>双重定价：山东炼焦煤走焦煤定价体系 → 售价最高；陕蒙化工煤溢价 → 毛利最高；新疆动力煤受限于运距 → 毛利最低</li>
+        <li><strong>成本差异悬殊</strong>：陕蒙露天矿成本约280元/吨 vs 澳洲约450元/吨 vs 山东井工约500元/吨</li>
+        <li><strong>"加工赚运费差"是新疆煤的逻辑</strong>：把低价值煤炭在本地加工成高货值化工品（烯烃等），赚取运费差，是新疆基地的核心价值主张</li>
+        <li><strong>权益再打折</strong>：盈利最好的鲁西矿业/未来能源和产量最大的西北矿业/新疆能化，均非全资，归母层面再打折扣</li>
+    </ul>
+
     <h3>3.2 煤化工业务分析</h3>
     <table>
         <thead>
@@ -583,6 +838,37 @@
         <li>📈 <strong>未来看点</strong>：高端煤化工（煤制烯烃、煤制芳烃）是转型升级方向</li>
     </ul>
 
+    <h4>3.2.2 煤化工业务财务与四大基地规划</h4>
+
+    <div class="info" style="margin:15px 0; padding:12px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>（2026年7月）。2025年煤炭业务营收约887亿元（毛利率36%）、煤化工业务营收约243亿元（毛利率26%）。</p>
+    </div>
+
+    <table class="data-table">
+        <tr><th>业务板块（2025年）</th><th>营业收入</th><th>毛利率</th><th>评价</th></tr>
+        <tr style="background:#e8f5e9;"><td><strong>煤炭业务</strong></td><td>约887亿元</td><td><strong>36%</strong></td><td>核心利润支柱，规模与盈利质量兼具</td></tr>
+        <tr style="background:#fff3e0;"><td><strong>煤化工业务</strong></td><td>约243亿元</td><td><strong>26%</strong></td><td>毛利率高于传统预期，烯烃为亮点</td></tr>
+    </table>
+    <p style="font-size:12px; color:#666; margin-top:8px;">
+        <em>注：</em>本报告上表3.2按产量法测算的2025年煤化工收入238.9亿元、毛利率11.0%，与雪球文章243亿元/26%存在差异，主要因统计口径（产量法vs收入法）和成本归集方式不同。上表为第三方研究视角，供交叉参考。
+    </p>
+
+    <h5>3.2.2.1 煤化工四大基地差异化定位</h5>
+    <table class="data-table">
+        <tr><th>基地</th><th>核心产品</th><th>定位与前景</th><th>文章评价</th></tr>
+        <tr style="background:#e8f5e9;"><td><strong>山东基地</strong></td><td>醇基、氨基产业链<br>（聚甲醛、醋酸、己内酰胺）</td><td>传统煤化工，类似鲁西化工/华鲁恒升模式</td><td>中规中矩，难做出差异性，行业卷起来未必赚钱</td></tr>
+        <tr style="background:#e8f5e9;"><td><strong>陕西基地</strong></td><td>煤制油<br>（未来能源）</td><td>2015年底产出合格柴油和石脑油</td><td>政策属性强，经济属性靠后排</td></tr>
+        <tr style="background:#e8f5e9;"><td><strong>内蒙基地</strong></td><td>烯烃80万吨<br>（荣信化工）</td><td>煤制烯烃</td><td>✅ 唯一真正的加分项，高附加值</td></tr>
+        <tr style="background:#e8f5e9;"><td><strong>新疆能化</strong></td><td>烯烃80万吨<br>（规划）</td><td>煤制烯烃，配套新疆低运费煤</td><td>✅ 把低价值煤加工成高货值化工品，赚运费差</td></tr>
+    </table>
+
+    <p><strong>核心判断：</strong></p>
+    <ul>
+        <li><strong>烯烃是煤化工唯一亮点</strong>：相比醋酸/己内酰胺等传统煤化工（内卷严重、难盈利），煤制烯烃具备高附加值，是兖矿煤化工的未来看点</li>
+        <li><strong>煤化工整体定位为煤炭配套</strong>：主要消化自产低价煤，赚取加工费，而非独立的高利润业务</li>
+        <li><strong>新疆煤化工逻辑成立</strong>：新疆煤运距劣势导致原煤毛利低，但就地转化为烯烃等化工品后，可规避运费损耗，价值大幅提升</li>
+    </ul>
+
     <h3>3.3 电力业务分析</h3>
     <table>
         <thead>
@@ -603,7 +889,7 @@
         <li><strong>盈利贡献有限</strong>：毛利占比约10%，低于煤炭业务的70%</li>
     </ul>
 
-    <h2>第四章 主要增量项目分析</h2>
+    <h2 id="ch4">第四章 主要增量项目分析</h2>
     
     <div class="info" style="margin:20px 0; padding:15px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
         <p><strong>📋 数据来源说明：</strong>本章增量项目数据来源于兖矿能源官方公告、年报披露、公司官网项目介绍、国家能源局产能核增公告等官方渠道。部分预期贡献数据为基于公开信息的合理推算。</p>
@@ -643,7 +929,40 @@
         <tr><td><strong>预期贡献</strong></td><td>建成后新增净利润约8-12亿/年</td><td>券商研报测算</td></tr>
     </table>
 
-    <h2>第五章 价格敏感性分析</h2>
+    <h3>4.3 西北矿业收购并表（2025年重大增量）</h3>
+
+    <div class="info" style="margin:15px 0; padding:12px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>、兖矿能源2025年重大资产收购公告。西北矿业原为山东能源集团旗下资产（含淄矿、临矿、新安等原山能集团在甘陕蒙的煤矿）。</p>
+    </div>
+
+    <table class="data-table">
+        <tr><th>项目要素</th><th>详细内容</th></tr>
+        <tr><td><strong>交易时间</strong></td><td>2025年</td></tr>
+        <tr><td><strong>收购标的</strong></td><td>西北矿业51%股权（实现并表）</td></tr>
+        <tr><td><strong>2025年煤炭产量</strong></td><td>约3,381万吨（并入后推动公司商品煤总产量增至1.82亿吨）</td></tr>
+        <tr><td><strong>资产构成</strong></td><td>原山能集团（淄矿、临矿、新安等）在甘肃、陕西、内蒙古等地的煤矿产能</td></tr>
+        <tr><td><strong>增量潜力</strong></td><td>甘肃地区多个矿井处于建设期，未来有望持续贡献增量</td></tr>
+        <tr style="background:#fff3e0;"><td><strong>权益占比</strong></td><td>仅51%，少数股东权益稀释归母净利</td></tr>
+    </table>
+    <p><strong>战略意义：</strong>西北矿业注入了原山能集团在陕甘蒙边角地带的优质煤矿资产。这些矿是2020年原山能与原兖矿合并后，集团"攒"起来的产能，注入上市公司平台后"放到现在还是很值钱的"。这次并表是兖矿能源2025年产量从1.7亿吨跃升至1.82亿吨的核心驱动力。</p>
+
+    <h3>4.4 兖煤澳洲红隼煤矿收购（2026年）</h3>
+
+    <table class="data-table">
+        <tr><th>项目要素</th><th>详细内容</th></tr>
+        <tr><td><strong>交易时间</strong></td><td>2026年</td></tr>
+        <tr><td><strong>收购标的</strong></td>
+            <td>红隼煤矿（Red Falcon）80%股权</td></tr>
+        <tr><td><strong>交易金额</strong></td>
+            <td>约18.5亿美元</td></tr>
+        <tr><td><strong>收购主体</strong></td>
+            <td>兖煤澳洲（Yancoal Australia，03668.HK）</td></tr>
+        <tr><td><strong>战略意义</strong></td>
+            <td>继2017年24.5亿美元收购力拓联合煤炭后，进一步巩固澳洲最大煤矿企业地位</td></tr>
+    </table>
+    <p><strong>国际化复盘：</strong>兖煤澳洲的国际化路径堪称中国煤企标杆——2004年收购南田煤矿起步，2017年以24.5亿美元收购力拓联合煤炭实现跨越，2026年再以18.5亿美元收购红隼煤矿80%股权，持续扩大澳洲优质产能布局。这是兖矿能源"外延扩张+海外运营"能力的集中体现。</p>
+
+    <h2 id="ch5">第五章 价格敏感性分析</h2>
     
     <h3>5.1 煤炭价格敏感性分析</h3>
     <table>
@@ -788,32 +1107,43 @@
         </tbody>
     </table>
 
-    <h2>第六章 投资价值分析</h2>
+    <h2 id="ch6">第六章 投资价值分析</h2>
     
-    <h3>6.1 估值分析（2026年6月）</h3>
-    <table>
-        <thead>
-            <tr><th>估值指标</th><th>数值</th><th>行业平均</th><th>评价</th></tr>
-        </thead>
-        <tbody>
-            <tr><td>市盈率（PE，2025年）</td><td>约8.5倍</td><td>约10-12倍</td><td>低估</td></tr>
-            <tr><td>市净率（PB，2025年）</td><td>约1.2倍</td><td>约1.5-1.8倍</td><td>低估</td></tr>
-            <tr><td>股息率（2025年）</td><td>约6.5%</td><td>约4-5%</td><td>高股息</td></tr>
-            <tr><td>ROE（2025年）</td><td>约10.2%</td><td>约8-10%</td><td>行业平均</td></tr>
-        </tbody>
+    <h3>6.1 估值分析（2026年7月更新）</h3>
+
+    <div class="info" style="margin:15px 0; padding:12px; background:#d1ecf1; border-left:4px solid #185FA5; border-radius:8px;">
+        <p><strong>📋 数据来源：</strong>雪球文章<a href="https://xueqiu.com/1372312379/399588017" target="_blank">《山东的煤以及兖矿能源》</a>（2026年7月）。A股市值1,823亿、H股市值1,065亿港币，为文章发布时点数据。注：本报告上文按年报口径测算的2025年归母净利润为152.67亿、PE约8.5倍；文章按2025年实际归母净利约84亿测算的口径与之存在差异，下方估值表以文章最新数据为基准并标注。</p>
+    </div>
+
+    <h4>6.1.1 A股与H股估值对比</h4>
+    <table class="data-table">
+        <tr><th>市场</th><th>市值</th><th>股息率（2025年）</th><th>说明</th></tr>
+        <tr style="background:#e8f5e9;"><td><strong>A股（600188.SH）</strong></td><td>约1,823亿元</td><td>约2.75%</td><td>估值不属"一眼低估"，按成长股逻辑定价</td></tr>
+        <tr style="background:#e8f5e9;"><td><strong>H股（01171.HK）</strong></td><td>约1,065亿港币</td><td>约5.45%</td><td>H股股息率显著高于A股，折价明显</td></tr>
     </table>
-    <p><strong>估值结论：</strong></p>
+
+    <h4>6.1.2 ROE与盈利周期</h4>
+    <table class="data-table">
+        <tr><th>指标</th><th>数值</th><th>评价</th></tr>
+        <tr><td><strong>2020–2025年平均ROE</strong></td><td>约21%</td><td>穿越多轮周期，盈利能力优秀</td></tr>
+        <tr style="background:#fff3e0;"><td><strong>2025年ROE</strong></td><td>约8%</td><td>行业低谷期，盈利显著回落</td></tr>
+        <tr><td><strong>周期回暖假设</strong></td><td>ROE回到16%→归母净利约170亿</td><td>弹性充足，但依赖煤价周期</td></tr>
+    </table>
+
+    <p><strong>估值结论与核心判断：</strong></p>
     <ul>
-        <li>✅ <strong>估值偏低</strong>：PE 8.5倍、PB 1.2倍，均低于行业平均，具备安全边际</li>
-        <li>🔥 <strong>高股息吸引力</strong>：股息率6.5%，适合价值投资者和股息偏好者</li>
-        <li>📈 <strong>业绩增长可期</strong>：金鸡滩煤矿扩产、转龙湾煤矿投产，2026-2028年净利润有望回升至170-210亿</li>
+        <li>📊 <strong>成长型而非红利型</strong>：兖矿能源是"成长性公司，暂时还不能用红利股的视角去估值"。2020-2025年平均归母净利167亿、平均ROE 21%，但2025年归母净利仅84亿、ROE 8%，盈利高度依赖行业周期</li>
+        <li>🌏 <strong>"全球煤炭ETF"式分散</strong>：产能分布于山东、陕蒙、新疆、澳洲、西北五大基地，可观察不同区域的煤炭盈利情况，但也带来"算账复杂"的问题（需逐矿盘成本、产能、资本开支并考虑权益占比）</li>
+        <li>📈 <strong>行业β属性强</strong>：兖矿能源长协比例不高，跟随行业周期波动的弹性更大，交易上"行业β属性会更强一些"</li>
+        <li>⏳ <strong>离"红利股"还差一轮景气周期</strong>：公司处于扩张期，有息负债不降反升，要转型为低负债、高分红的红利股，"可能还需要再经历一轮煤炭景气周期"</li>
+        <li>💡 <strong>利好与利空并存</strong>：利好——未来仍有资产注入和新矿投产预期；利空——若行业景气周期不来，兖矿可能"还得再熬上几年"</li>
     </ul>
 
     </div>
 
     <hr style="margin:40px 0;">
     <p style="text-align:center; color:#999; font-size:12px;">
-        报告编制：AI辅助分析｜数据来源：兖矿能源年度报告、上交所/巨潮资讯网披露、券商研报｜报告日期：2026年6月21日
+        报告编制：AI辅助分析｜数据来源：兖矿能源年度报告、上交所/巨潮资讯网披露、券商研报、雪球《山东的煤以及兖矿能源》（2026年7月）｜报告日期：2026年7月（含2025年报及最新研究数据）
     </p>
 
     <script>
@@ -907,6 +1237,19 @@
             }
         });
     </script>
-</div>
+
+    <hr class="divider">
+</main>
+
+    <footer class="site-footer">
+        <p>© 2026 Terry Research</p>
+        <p>数据来源：公司年度报告等官方渠道</p>
+        <p>本报告基于公开资料整理，仅供学习交流，不构成任何投资建议。投资有风险，入市需谨慎。</p>
+    </footer>
+
+
+<div class="read-progress" aria-hidden="true"></div>
+<button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script src="assets/app.js"></script>
 </body>
 </html>

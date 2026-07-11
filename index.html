@@ -3,303 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terry Research</title>
-    <style>
-        * { margin:0; padding:0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 20px;
-        }
-        .container { 
-            max-width: 960px; 
-            width: 100%; 
-            background: white; 
-            border-radius: 20px; 
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
-            overflow: hidden;
-        }
-        .header { 
-            background: linear-gradient(135deg, #185FA5 0%, #0F6E56 100%); 
-            color: white; 
-            padding: 60px 40px; 
-            text-align: center;
-        }
-        .header h1 { 
-            font-size: 42px; 
-            margin-bottom: 10px; 
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        .header p { 
-            font-size: 18px; 
-            opacity: 0.9; 
-            margin-top: 10px;
-        }
-        .header .subtitle { 
-            font-size: 16px; 
-            opacity: 0.7; 
-            margin-top: 5px;
-            font-weight: 300;
-        }
-        .content { 
-            padding: 40px;
-        }
-        .section-title { 
-            font-size: 24px; 
-            color: #185FA5; 
-            margin-bottom: 25px; 
-            padding-bottom: 10px; 
-            border-bottom: 3px solid #185FA5;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .industry-group {
-            margin-bottom: 40px;
-        }
-        .industry-label {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 15px;
-            padding-left: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .projects { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 20px; 
-        }
-        .project-card { 
-            background: #f8f9fa; 
-            border-radius: 12px; 
-            padding: 25px; 
-            border-left: 5px solid #185FA5;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .project-card:hover { 
-            transform: translateX(5px); 
-            box-shadow: 0 5px 20px rgba(24,95,165,0.2); 
-            background: #e8f4fd;
-        }
-        .project-card h3 { 
-            font-size: 20px; 
-            color: #185FA5; 
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .project-card .desc { 
-            color: #666; 
-            font-size: 14px; 
-            line-height: 1.8; 
-            margin-bottom: 15px;
-        }
-        .project-card .meta { 
-            display: flex; 
-            gap: 15px; 
-            flex-wrap: wrap; 
-            margin-bottom: 15px;
-        }
-        .project-card .tag { 
-            background: white; 
-            padding: 5px 12px; 
-            border-radius: 20px; 
-            font-size: 12px; 
-            color: #185FA5; 
-            border: 1px solid #185FA5;
-        }
-        .btn { 
-            display: inline-block; 
-            padding: 10px 25px; 
-            background: #185FA5; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-size: 14px; 
-            transition: all 0.3s ease;
-        }
-        .btn:hover { 
-            background: #0F6E56; 
-            transform: translateY(-2px); 
-            box-shadow: 0 5px 15px rgba(24,95,165,0.3);
-        }
-        .coming-soon {
-            background: #f0f0f0;
-            border-left-color: #ccc;
-            cursor: default;
-            opacity: 0.7;
-        }
-        .coming-soon:hover {
-            transform: none;
-            box-shadow: none;
-            background: #f0f0f0;
-        }
-        .coming-soon .btn {
-            background: #ccc;
-            cursor: default;
-        }
-        .about { 
-            background: #f8f9fa; 
-            border-radius: 12px; 
-            padding: 25px; 
-            margin-bottom: 30px;
-        }
-        .about h3 { 
-            font-size: 18px; 
-            color: #185FA5; 
-            margin-bottom: 15px;
-        }
-        .about p { 
-            color: #666; 
-            font-size: 14px; 
-            line-height: 1.8; 
-            margin-bottom: 10px;
-        }
-        .footer { 
-            background: #f8f9fa; 
-            padding: 20px 40px; 
-            text-align: center; 
-            color: #999; 
-            font-size: 13px;
-            border-top: 1px solid #eee;
-        }
-        @media (max-width: 768px) { 
-            .header h1 { font-size: 32px; } 
-            .content { padding: 25px; } 
-            .header { padding: 40px 25px; }
-        }
-    </style>
+    <title>Terry Research · 中国股票研究平台</title>
+    <link rel="stylesheet" href="assets/terry-style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🏠 Terry Research</h1>
+<body class="theme-coal">
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-logo" href="index.html">📊 Terry Research</a>
+            <nav class="site-nav">
+                <span class="site-nav__current">研究平台首页</span>
+            </nav>
         </div>
+    </header>
 
-        <div class="content">
-            <div class="section-title">
-                <span>📊</span>
-                <span>研究项目</span>
-            </div>
+    <main class="container">
 
-            <!-- 能源行业 -->
-            <div class="industry-group">
-                <div class="industry-label">⚡ 煤炭行业 Coal Industry</div>
-                <div class="projects">
-                    <!-- 项目1：焦煤 -->
-                    <div class="project-card" onclick="window.open('coking-coal-report.html', '_blank')">
-                        <h3>
-                            <span>📈</span>
-                            <span>国内优质低硫主焦煤深度研究</span>
-                        </h3>
-                        <p class="desc">
-                            聚焦国内优质低硫主焦煤行业，深度分析首钢资源（00639.HK）等龙头企业。<br>
-                            包含近五年财务数据、价格敏感性分析、投资建议等完整研究内容。
-                        </p>
-                        <div class="meta">
-                            <span class="tag">📅 2026年6月</span>
-                            <span class="tag">📊 16章完整报告</span>
-                            <span class="tag">📈 首钢资源+嘉友国际深度分析</span>
-                        </div>
-                        <a href="coking-coal-report.html" class="btn" target="_blank">查看完整报告 →</a>
-                    </div>
-                    
-                    <!-- 项目2：动力煤 -->
-                    <div class="project-card" onclick="window.open('thermal-coal-report.html', '_blank')">
-                        <h3>
-                            <span>📉</span>
-                            <span>国内动力煤深度研究</span>
-                        </h3>
-                        <p class="desc">
-                            全面分析国内动力煤行业，覆盖中国神华、陕西煤业、兖矿能源等龙头企业。<br>
-                            包含财务分析、敏感性分析、价格预测、投资建议等完整研究框架。
-                        </p>
-                        <div class="meta">
-                            <span class="tag">📅 2026年6月</span>
-                            <span class="tag">📊 12章完整报告</span>
-                            <span class="tag">📈 多家企业深度分析</span>
-                        </div>
-                        <a href="thermal-coal-report.html" class="btn" target="_blank">查看完整报告 →</a>
-                    </div>
-
+        <!-- 平台概览 hero -->
+        <section class="hero">
+            <h1 class="report-title" style="border:none;padding:0;margin:0 0 12px;">Terry Research 研究平台</h1>
+            <p class="report-subtitle" style="margin-bottom:20px;">聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <div class="hero__num">15<span>+</span></div>
+                    <div class="hero__label">深度研究报告</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__num">2</div>
+                    <div class="hero__label">覆盖行业</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__num">5<span>年</span></div>
+                    <div class="hero__label">财务分析区间</div>
+                </div>
+                <div class="hero__stat">
+                    <div class="hero__num">✅</div>
+                    <div class="hero__label">官方数据核验</div>
                 </div>
             </div>
+        </section>
 
-            <!-- 有色金属行业 -->
-            <div class="industry-group">
-                <div class="industry-label">🏭 有色金属行业 Non-Ferrous Metals Industry</div>
-                <div class="projects">
-                    <!-- 项目1：有色金属综合研究 -->
-                    <div class="project-card" onclick="window.open('nonferrous-metals-report.html', '_blank')">
-                        <h3>
-                            <span>🏗️</span>
-                            <span>中国有色金属行业深度研究</span>
-                        </h3>
-                        <p class="desc">
-                            聚焦6种主要有色金属（金、银、铜、锂、铝、锡），深度分析紫金矿业、招金矿业、藏格矿业、兴业银锡、神火股份等龙头企业。<br>
-                            包含金属基本面研究、企业财务分析、敏感性分析、投资建议等完整研究内容。
-                        </p>
-                        <div class="meta">
-                            <span class="tag">📅 2026年6月</span>
-                            <span class="tag">📊 16章完整报告</span>
-                            <span class="tag">📈 6种金属+5家企业深度分析</span>
-                        </div>
-                        <a href="nonferrous-metals-report.html" class="btn" target="_blank">查看完整报告 →</a>
+        <p class="report-subtitle" style="margin:24px 0 0;font-size:14px;color:var(--muted);">
+            💡 每个行业报告下均包含其成分公司的独立深度研究，点击行业报告后再下钻查看公司报告。
+        </p>
+
+        <!-- 煤炭行业 -->
+        <div class="industry-group">
+            <div class="industry-label">⚡ 煤炭行业 Coal Industry</div>
+            <div class="projects">
+                <!-- 焦煤行业（入口） -->
+                <div class="project-card">
+                    <h3>📈 国内优质低硫主焦煤深度研究</h3>
+                    <p class="desc">聚焦国内优质低硫主焦煤行业，深度分析首钢资源、嘉友国际、淮北矿业等龙头企业。包含近五年财务数据、价格敏感性分析、投资建议等完整研究内容。</p>
+                    <div class="meta">
+                        <span class="tag">📅 2026年6月</span>
+                        <span class="tag">📊 18章完整报告</span>
+                        <span class="tag">📈 3家成分公司</span>
                     </div>
-
+                    <a href="coking-coal-report.html" class="btn">查看行业报告 →</a>
+                    <div class="child-reports">
+                        <a class="child-report" href="shougang-report.html"><span class="child-report__name">首钢资源</span><span class="child-report__ticker">00639.HK</span></a>
+                        <a class="child-report" href="jiayou-report.html"><span class="child-report__name">嘉友国际</span><span class="child-report__ticker">603871.SH</span></a>
+                        <a class="child-report" href="huaibei-report.html"><span class="child-report__name">淮北矿业</span><span class="child-report__ticker">600985.SH</span></a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 更多行业（占位，后续添加） -->
-            <div class="industry-group">
-                <div class="industry-label">🏭 更多行业即将上线 More Industries Coming Soon</div>
-                <div class="projects">
-                    <div class="project-card coming-soon">
-                        <h3>
-                            <span>🏗️</span>
-                            <span>待添加研究方向</span>
-                        </h3>
-                        <p class="desc">
-                            如果您有感兴趣的行业或公司，欢迎提供研究方向建议。<br>
-                            后续将持续添加新能源、化工、消费等行业的深度研究报告。
-                        </p>
-                        <div class="meta">
-                            <span class="tag">📅 敬请期待</span>
-                        </div>
-                        <a href="javascript:void(0)" class="btn">即将上线 →</a>
+                <!-- 动力煤行业（入口） -->
+                <div class="project-card">
+                    <h3>📉 国内动力煤深度研究</h3>
+                    <p class="desc">全面分析国内动力煤行业，覆盖陕西煤业、兖矿能源、广汇能源等龙头企业。包含财务分析、敏感性分析、价格预测、投资建议等完整研究框架。</p>
+                    <div class="meta">
+                        <span class="tag">📅 2026年6月</span>
+                        <span class="tag">📊 12章完整报告</span>
+                        <span class="tag">📈 3家成分公司</span>
+                    </div>
+                    <a href="thermal-coal-report.html" class="btn">查看行业报告 →</a>
+                    <div class="child-reports">
+                        <a class="child-report" href="shaanxi-coal-report.html"><span class="child-report__name">陕西煤业</span><span class="child-report__ticker">601225.SH</span></a>
+                        <a class="child-report" href="yankuang-energy-report.html"><span class="child-report__name">兖矿能源</span><span class="child-report__ticker">600188.SH</span></a>
+                        <a class="child-report" href="guanghui-energy-report.html"><span class="child-report__name">广汇能源</span><span class="child-report__ticker">600256.SH</span></a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="about">
-                <h3>📁 关于 Terry Research</h3>
-                <p><strong>平台定位：</strong>聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
-                <p><strong>研究方法：</strong>基于公开的财务数据，结合行业趋势分析，提供价格敏感性分析、投资建议等量化研究内容。</p>
-                <p><strong>更新频率：</strong>根据行业动态和企业财报发布情况，定期更新研究报告。</p>
-                <p><strong>免责声明：</strong>本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
-            </div>
-
-            <div class="about">
-                <h3>📊 数据来源说明</h3>
-                <p>• 财务数据：各上市公司年度报告（2021-2025年）</p>
-                <p>• 价格数据：Wind、同花顺、新浪财经</p>
-                <p>• 行业数据：国家能源局、中国煤炭工业协会等</p>
-                <p>• 券商研报：中金公司、华泰证券、国泰君安等</p>
+        <!-- 有色金属行业 -->
+        <div class="industry-group">
+            <div class="industry-label">🏭 有色金属行业 Non-Ferrous Metals Industry</div>
+            <div class="projects">
+                <!-- 有色金属行业（入口） -->
+                <div class="project-card">
+                    <h3>🏗️ 中国有色金属行业深度研究</h3>
+                    <p class="desc">聚焦 6 种主要有色金属（金、银、铜、锂、铝、锡），深度分析紫金矿业、招金矿业、藏格矿业、兴业银锡、神火股份等龙头企业。包含金属基本面、企业财务、敏感性分析、投资建议等完整内容。</p>
+                    <div class="meta">
+                        <span class="tag">📅 2026年6月</span>
+                        <span class="tag">📊 16章完整报告</span>
+                        <span class="tag">📈 5家成分公司</span>
+                    </div>
+                    <a href="nonferrous-metals-report.html" class="btn">查看行业报告 →</a>
+                    <div class="child-reports">
+                        <a class="child-report" href="zijin-mining-report.html"><span class="child-report__name">紫金矿业</span><span class="child-report__ticker">601899.SH</span></a>
+                        <a class="child-report" href="zhaojin-mining-report.html"><span class="child-report__name">招金矿业</span><span class="child-report__ticker">01818.HK</span></a>
+                        <a class="child-report" href="zangge-mining-report.html"><span class="child-report__name">藏格矿业</span><span class="child-report__ticker">000408.SZ</span></a>
+                        <a class="child-report" href="xingye-yintin-report.html"><span class="child-report__name">兴业银锡</span><span class="child-report__ticker">000426.SZ</span></a>
+                        <a class="child-report" href="shenhuo-shares-report.html"><span class="child-report__name">神火股份</span><span class="child-report__ticker">000933.SZ</span></a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="footer">
-            <p>© 2026 Terry Research</p>
-            <p style="margin-top:5px;">本报告仅供学习交流，不构成投资建议</p>
+        <!-- 占位行业 -->
+        <div class="industry-group">
+            <div class="industry-label">🏭 更多行业即将上线 More Industries Coming Soon</div>
+            <div class="projects">
+                <div class="project-card is-soon">
+                    <h3>🗂️ 待添加研究方向</h3>
+                    <p class="desc">如果您有感兴趣的行业或公司，欢迎提供研究方向建议。后续将持续添加新能源、化工、消费等行业的深度研究报告。</p>
+                    <div class="meta"><span class="tag">📅 敬请期待</span></div>
+                    <a href="javascript:void(0)" class="btn">即将上线 →</a>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <hr class="divider">
+
+        <div class="box box--info">
+            <div class="box__title">📁 关于 Terry Research</div>
+            <p><strong>平台定位：</strong>聚焦中国资本市场，提供多行业、多维度的深度研究报告，助力价值发现。</p>
+            <p><strong>研究方法：</strong>基于公开的财务数据，结合行业趋势分析，提供价格敏感性分析、投资建议等量化研究内容。</p>
+            <p><strong>更新频率：</strong>根据行业动态和企业财报发布情况，定期更新研究报告。</p>
+            <p><strong>免责声明：</strong>本报告仅供参考，不构成投资建议。投资有风险，入市需谨慎。</p>
+        </div>
+
+        <div class="box box--note">
+            <div class="box__title">📊 数据来源说明</div>
+            <p>• 财务数据：各上市公司年度报告（2021–2025年）</p>
+            <p>• 价格数据：Wind、同花顺、新浪财经</p>
+            <p>• 行业数据：国家能源局、中国煤炭工业协会等</p>
+            <p>• 券商研报：中金公司、华泰证券、国泰君安等</p>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Terry Research</p>
+        <p>本报告仅供学习交流，不构成投资建议</p>
+    </footer>
+
+    <!-- 阅读进度条 + 回到顶部 + 共享交互脚本 -->
+    <div class="read-progress" aria-hidden="true"></div>
+    <button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script src="assets/app.js"></script>
+
 </body>
 </html>

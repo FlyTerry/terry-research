@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# WorkBuddy agent 内部记忆与运行数据（不纳入版本管理）
+.workbuddy/
+
+# Python 缓存
+__pycache__/
+
+# 临时/残留空文件
+/0
+
+# 年报/半年报 PDF：体积大，留本地作数据源，不纳入 GitHub
+# data/ 下只跟踪轻量提取数据（.md / .csv / .json 等）
+data/**/*.pdf
