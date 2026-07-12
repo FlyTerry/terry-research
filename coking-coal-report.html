@@ -46,7 +46,7 @@
         <p><strong>数据来源：</strong> 国家统计局、中国煤炭工业协会、各公司2025年年报、东方财富网、我的钢铁网等</p>
         <br>
         
-    <div style="background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px; margin: 30px 0;">
+    <div class="detail-card" style="background: #f8f9fa; border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px; margin: 30px 0;">
         <h2 id="ch1">一、资源概况</h2>
         <br>
         <p>探明储量（2022年）</p>
@@ -177,24 +177,30 @@
                 </tr>
             </tbody>
         </table>
+        </div>
         <br>
         <h2 id="ch4">四、2025-2026年产量及供应情况</h2>
         <br>
-        <p>2025年炼焦煤进口量</p>
-        <br>
-        <p>1.2亿吨</p>
-        <br>
-        <p>同比下降3.0%</p>
-        <br>
-        <p>数据来源：<a href="https://baijiahao.baidu.com/s?id=1854891974176559175" target="_blank">海关总署数据（2026年1月20日）</a></p>
-        <br>
-        <p>2026年1-3月进口量</p>
-        <br>
-        <p>3225万吨</p>
-        <br>
-        <p>同比增长17.56%</p>
-        <br>
-        <p>数据来源：<a href="https://xueqiu.com/2292493775/387803834" target="_blank">雪球 - 商品周期106（2026年5月8日）</a></p>
+        <div class="detail-card">
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="text-align:center; padding: 1rem; background: #f0f4f8; border-radius: 8px;">
+              <div style="font-size: 2rem; font-weight: 700; color: #185FA5;">1.2亿</div>
+              <div style="font-size: 0.85rem; color: #666;">2025年炼焦煤进口量（吨）</div>
+              <div style="font-size: 0.8rem; color: #c0392b;">同比↓3.0%</div>
+            </div>
+            <div style="text-align:center; padding: 1rem; background: #f0f4f8; border-radius: 8px;">
+              <div style="font-size: 2rem; font-weight: 700; color: #185FA5;">3,225万</div>
+              <div style="font-size: 0.85rem; color: #666;">2026年1-3月进口量（吨）</div>
+              <div style="font-size: 0.8rem; color: #27ae60;">同比↑17.56%</div>
+            </div>
+            <div style="text-align:center; padding: 1rem; background: #f0f4f8; border-radius: 8px;">
+              <div style="font-size: 2rem; font-weight: 700; color: #185FA5;">48.5亿</div>
+              <div style="font-size: 0.85rem; color: #666;">2025年全国原煤产量（吨）</div>
+              <div style="font-size: 0.8rem; color: #27ae60;">同比↑1.4%</div>
+            </div>
+          </div>
+          <p style="margin-top: 0.5rem;"><strong>✅ 数据来源：</strong>海关总署（<a href="https://baijiahao.baidu.com/s?id=1854891974176559175">2026年1月20日</a>）、国家统计局</p>
+        </div>
         <br>
 
         <div class="chart-container">
@@ -220,397 +226,76 @@
                 <canvas id="priceChart"></canvas>
             </div>
         </div>
+        <div class="detail-card">
+        <h3 id="section-ch5-1">5.1 价格走势概览与图表</h3>
+        <br>
+        <p>据我的钢铁网（Mysteel）<strong>2025年年报数据</strong>和<strong>2026年展望报告</strong>，2025年国产炼焦煤价格指数走势如下：</p>
+        <ul>
+            <li><strong>年初</strong>：1273.3元/吨</li>
+            <li><strong>6月下旬</strong>：降至936.5元/吨（近8年低点），跌幅约26.4%</li>
+            <li><strong>11月中旬</strong>：反弹至1407.1元/吨，已远超年初高点</li>
+            <li><strong>年末</strong>：高位回落，全年均价约1,380元/吨，同比下跌27.2%</li>
+        </ul>
+        <p>特点：2025年价格呈现"先跌后涨、震荡运行"格局，整体价格重心较2024年继续下移。</p>
+        <p class="data-source">✅ 数据来源：MySteel国产炼焦煤价格指数（日报） | <a href="https://baijiahao.baidu.com/s?id=1854458195330048876" target="_blank">MySteel 2026年年报</a></p>
         <br>
 
-        <h3 id="section-5-mysteel炼焦煤周度价格数据表2024-2026年关键时">MySteel炼焦煤周度价格数据表（2024-2026年关键时间点）</h3>
+        <h3 id="section-ch5-2">5.2 分煤种关键价格节点表</h3>
         <br>
         <table>
             <thead>
                 <tr>
                     <th>时间</th>
-                    <th>低硫主焦煤(安泽)</th>
-                    <th>高硫主焦煤</th>
-                    <th>中硫主焦煤</th>
-                    <th>肥煤</th>
-                    <th>1/3焦煤</th>
-                    <th>MySteel国产炼焦煤指数</th>
+                    <th>低硫主焦(安泽)</th>
+                    <th>中硫主焦</th>
+                    <th>MySteel国产指数</th>
+                    <th>备注</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>2024年1月（高点）</td>
-                    <td>2,550</td>
-                    <td>1,800</td>
-                    <td>2,000</td>
-                    <td>1,800</td>
-                    <td>1,700</td>
-                    <td>~2,000</td>
-                </tr>
-                <tr>
-                    <td>2024年4月（低点）</td>
-                    <td>1,650</td>
-                    <td>1,200</td>
-                    <td>1,400</td>
-                    <td>1,300</td>
-                    <td>1,200</td>
-                    <td>~1,400</td>
-                </tr>
-                <tr>
-                    <td>2024年6月</td>
-                    <td>2,200</td>
-                    <td>1,600</td>
-                    <td>1,900</td>
-                    <td>1,700</td>
-                    <td>1,600</td>
-                    <td>~1,800</td>
-                </tr>
-                <tr>
-                    <td>2024年8月（全年低点）</td>
-                    <td>1,650</td>
-                    <td>1,100</td>
-                    <td>1,300</td>
-                    <td>1,200</td>
-                    <td>1,100</td>
-                    <td>~1,350</td>
-                </tr>
-                <tr>
-                    <td>2024年12月</td>
-                    <td>1,973</td>
-                    <td>1,420</td>
-                    <td>1,800</td>
-                    <td>1,600</td>
-                    <td>1,550</td>
-                    <td>~1,700</td>
-                </tr>
-                <tr>
-                    <td><strong>2024年均价</strong></td>
-                    <td><strong>1,972</strong></td>
-                    <td><strong>1,420</strong></td>
-                    <td><strong>1,800</strong></td>
-                    <td><strong>1,600</strong></td>
-                    <td><strong>1,550</strong></td>
-                    <td><strong>1,757</strong></td>
-                </tr>
-                <tr>
-                    <td>2025年1月</td>
-                    <td>1,950</td>
-                    <td>1,400</td>
-                    <td>1,780</td>
-                    <td>1,580</td>
-                    <td>1,530</td>
-                    <td>1,273.3</td>
-                </tr>
-                <tr>
-                    <td>2025年6月（全年低点）</td>
-                    <td>1,000</td>
-                    <td>820</td>
-                    <td>900</td>
-                    <td>880</td>
-                    <td>850</td>
-                    <td>936.5</td>
-                </tr>
-                <tr>
-                    <td>2025年11月（反弹高点）</td>
-                    <td>1,800</td>
-                    <td>1,200</td>
-                    <td>1,400</td>
-                    <td>1,300</td>
-                    <td>1,200</td>
-                    <td>1,407.1</td>
-                </tr>
-                <tr>
-                    <td>2025年12月</td>
-                    <td>1,380</td>
-                    <td>1,100</td>
-                    <td>1,200</td>
-                    <td>1,100</td>
-                    <td>1,050</td>
-                    <td>~1,200</td>
-                </tr>
-                <tr>
-                    <td><strong>2025年均价</strong></td>
-                    <td><strong>~1,050</strong></td>
-                    <td><strong>~820</strong></td>
-                    <td><strong>~900</strong></td>
-                    <td><strong>~880</strong></td>
-                    <td><strong>~850</strong></td>
-                    <td><strong>1,156</strong></td>
-                </tr>
-                <tr>
-                    <td>2026年1月</td>
-                    <td>1,800</td>
-                    <td>1,300</td>
-                    <td>1,350</td>
-                    <td>1,400</td>
-                    <td>1,350</td>
-                    <td>~1,500</td>
-                </tr>
-                <tr>
-                    <td>2026年4月22日</td>
-                    <td>1,525</td>
-                    <td>1,353</td>
-                    <td>1,416</td>
-                    <td>~1,500</td>
-                    <td>~1,400</td>
-                    <td>~1,600</td>
-                </tr>
-                <tr>
-                    <td>2026年6月18日</td>
-                    <td>2,040</td>
-                    <td>1,729</td>
-                    <td>1,823</td>
-                    <td>1,865</td>
-                    <td>1,584</td>
-                    <td>1,986.1(低硫指数)</td>
-                </tr>
-                <tr>
-                    <td><strong>2026年均价（截至6月）</strong></td>
-                    <td><strong>~1,800</strong></td>
-                    <td><strong>~1,400</strong></td>
-                    <td><strong>~1,500</strong></td>
-                    <td><strong>~1,600</strong></td>
-                    <td><strong>~1,450</strong></td>
-                    <td><strong>~1,700</strong></td>
-                </tr>
+                <tr><td><strong>2024年均价</strong></td><td>1,972</td><td>1,800</td><td>1,757</td><td>年度基准</td></tr>
+                <tr><td>2025年6月（低点）</td><td>1,000</td><td>900</td><td>936.5</td><td>价格触底，近8年低点</td></tr>
+                <tr><td>2025年11月（反弹）</td><td>1,800</td><td>1,400</td><td>1,407.1</td><td>阶段性反弹</td></tr>
+                <tr><td>2025年12月</td><td>1,380</td><td>1,200</td><td>~1,200</td><td>年末回落</td></tr>
+                <tr><td>2026年4月</td><td>1,525</td><td>1,416</td><td>~1,600</td><td>稳步回升</td></tr>
+                <tr><td>2026年6月</td><td>2,040</td><td>1,823</td><td>1,986.1</td><td>超2024年均价</td></tr>
             </tbody>
         </table>
         <br>
-        <p class="data-source">数据来源：</p>
-        <ul>
-            <li>MySteel我的钢铁网 - 炼焦煤国产现货价格指数（周度更新）</li>
-            <li>MySteel 2024年炼焦煤市场运行情况回顾（2024年11月25日）</li>
-            <li>MySteel 2026年炼焦煤年度报告（2026年1月16日）</li>
-            <li>MySteel官网炼焦煤价格行情（2026年6月18日）</li>
-            <li>MySteel公众号周度价格数据更新</li>
-        </ul>
+        <p class="data-source">✅ 数据来源：MySteel我的钢铁网 - 炼焦煤国产现货价格指数（周度更新）</p>
         <br>
-
-
-                <h3 id="section-6-mysteel国产炼焦煤价格指数2025年全景">Mysteel国产炼焦煤价格指数（2025年全景）</h3>
-        <br>
-        <p>据我的钢铁网（Mysteel）<strong>2025年年报数据</strong>和<strong>2026年展望报告</strong>，2025年国产炼焦煤价格指数走势如下：</p>
-        <ul>
-            <li><strong>年初</strong>：1273.3元/吨</li>
-        </ul>
-        <ul>
-            <li><strong>6月下旬</strong>：降至936.5元/吨（近8年低点），跌幅约26.4%</li>
-        </ul>
-        <ul>
-            <li><strong>11月中旬</strong>：反弹至1407.1元/吨，已远超年初高点</li>
-        </ul>
-        <ul>
-            <li><strong>年末</strong>：高位回落，全年均价约1380元/吨，同比下跌27.2%</li>
-        </ul>
-        <br>
-        <p>特点：2025年价格呈现"先跌后涨、震荡运行"格局，整体价格重心较2024年继续下移。</p>
-        <br>
-        <p class="data-source">数据来源：</p>
-        <ul>
-            <li>MySteel国产炼焦煤价格指数（日报）</li>
-        </ul>
-        <ul>
-            <li><a href="https://baijiahao.baidu.com/s?id=1854458195330048876" target="_blank">我的钢铁网（Mysteel）2026年年报</a></li>
-        </ul>
-        <br>
-        <h3 id="section-7-2026年最新价格截至4月22日mysteel数据">2026年最新价格（截至4月22日，Mysteel数据）</h3>
-        <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>煤种</th>
-                    <th>价格（元/吨）</th>
-                    <th>年同比涨幅</th>
-                    <th>涨幅金额（元）</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>高硫主焦煤</td>
-                    <td>1,353</td>
-                    <td>+31%</td>
-                    <td>+318</td>
-                </tr>
-                <tr>
-                    <td>低硫主焦煤</td>
-                    <td>1,525</td>
-                    <td>+17%</td>
-                    <td>+222</td>
-                </tr>
-                <tr>
-                    <td>中硫主焦煤</td>
-                    <td>1,416</td>
-                    <td>+24%</td>
-                    <td>+271</td>
-                </tr>
-                <tr>
-                    <td>肥煤</td>
-                    <td>-</td>
-                    <td>+27%</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>瘦煤</td>
-                    <td>-</td>
-                    <td>+17%</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>气煤</td>
-                    <td>-</td>
-                    <td>+8%</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>1/3焦煤</td>
-                    <td>-</td>
-                    <td>+18%</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <p>数据来源：<a href="https://finance.sina.com.cn/wm/2026-04-23/doc-inhvntew5011374.shtml" target="_blank">我的钢铁网（Mysteel）2026年4月23日</a></p>
-        <br>
-        <h3 id="section-8-mysteel周度价格数据2026年6月更新">MySteel周度价格数据（2026年6月更新）</h3>
-        <br>
-        <blockquote>**说明**：MySteel公众号每周更新炼焦煤价格数据，以下为2026年6月最新周度价格</blockquote>
-        <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>品种</th>
-                    <th>价格（元/吨）</th>
-                    <th>涨跌</th>
-                    <th>数据来源</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>6月1日</td>
-                    <td>安泽低硫主焦煤</td>
-                    <td>1,800</td>
-                    <td>-</td>
-                    <td>MySteel月报（2026.6.2）</td>
-                </tr>
-                <tr>
-                    <td>6月12日</td>
-                    <td>港口准一级冶金焦（贸易出库）</td>
-                    <td>1,730</td>
-                    <td>持平</td>
-                    <td>MySteel港口指数周评</td>
-                </tr>
-                <tr>
-                    <td>6月12日</td>
-                    <td>港口一级冶金焦（贸易出库）</td>
-                    <td>1,830</td>
-                    <td>持平</td>
-                    <td>MySteel港口指数周评</td>
-                </tr>
-                <tr>
-                    <td>6月16日</td>
-                    <td>国产炼焦煤综合价</td>
-                    <td>1,650</td>
-                    <td>+20.1</td>
-                    <td>MySteel煤焦指数日报</td>
-                </tr>
-                <tr>
-                    <td>6月17日</td>
-                    <td>安泽低硫主焦煤</td>
-                    <td>2,040</td>
-                    <td>+60</td>
-                    <td>MySteel现货价格行情</td>
-                </tr>
-                <tr>
-                    <td>6月17日</td>
-                    <td>日照港准一级焦出库价</td>
-                    <td>1,770</td>
-                    <td>+10</td>
-                    <td>MySteel煤焦指数日报（2026.6.16）</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <blockquote>**获取方式**：MySteel官网(coal.mysteel.com)、MySteel APP、MySteel公众号每周价格更新</blockquote>
-        <br>
-        <h3 id="section-9-2026年五一期间区域市场价格mysteel5月5日">2026年五一期间区域市场价格（Mysteel，5月5日）</h3>
-        <br>
-        <p><strong>山西市场：</strong> 高硫主焦小幅下跌，低硫主焦延续小幅补涨</p>
-        <br>
-        <p><strong>河北市场：</strong></p>
-        <ul>
-            <li>唐山主焦煤（A<11,S<0.8,G>85）：1,595元/吨</li>
-        </ul>
-        <ul>
-            <li>邯郸低硫主焦精煤（A<11,S<0.8,G>85）：1,490元/吨</li>
-        </ul>
-        <ul>
-            <li>邢台低硫1/3焦精煤（A<9.0,S<0.5,G>85）：1,160元/吨</li>
-        </ul>
-        <br>
-        <p><strong>东北市场：</strong></p>
-        <ul>
-            <li>七台河主焦煤（A10.5,S0.3,G90）：1,240元/吨</li>
-        </ul>
-        <br>
-        <p><strong>海运进口煤（港口含税自提）：</strong></p>
-        <ul>
-            <li>K4主焦煤（曹妃甸/日照）：1,400元/吨</li>
-        </ul>
-        <ul>
-            <li>贡耶拉主焦煤（曹妃甸）：1,700元/吨</li>
-        </ul>
-        <ul>
-            <li>澳洲优质低挥发焦煤CFR：218-219美元/湿吨</li>
-        </ul>
-        <br>
-        <p>数据来源：<a href="https://www.163.com/dy/article/KS68KDVS0514AHGG.html" target="_blank">我的钢铁网（Mysteel）2026年5月5日</a></p>
-        <br>
-        <h3 id="section-10-主焦煤价差分析2026年1-4月">主焦煤价差分析（2026年1-4月）</h3>
+        <h3 id="section-ch5-3">5.3 价差与趋势分析</h3>
         <br>
         <p>据Mysteel分析，2026年1-4月炼焦煤价格呈现以下特征：</p>
-        <br>
-        <p>1. <strong>整体趋势</strong>：先抑后扬，各煤种整体性上涨，价格中枢上移</p>
-        <p>2. <strong>价差收窄</strong>：高硫主焦煤涨幅领先（+31%），低硫（+17%），主焦煤品种价差逐渐收窄</p>
-        <p>3. <strong>驱动因素</strong>：</p>
-        <p>   - 配煤技术突破，高硫主焦煤配比上限增加</p>
-        <p>   - 脱硫能力提升，高硫煤使用更稳定</p>
-        <p>   - 美国进口煤政策变化，增加国内高硫采购</p>
-        <p>   - 矿山库存维持低位，报价坚挺</p>
-        <p>   - 华北华东焦企盈利较好，采购灵活性高</p>
+        <ul>
+            <li><strong>整体趋势</strong>：先抑后扬，各煤种整体性上涨，价格中枢上移</li>
+            <li><strong>价差收窄</strong>：高硫主焦煤涨幅领先（+31%），低硫（+17%），主焦煤品种价差逐渐收窄</li>
+            <li><strong>驱动因素</strong>：配煤技术突破、脱硫能力提升推动高硫煤使用扩大；美国进口煤政策变化增加国内高硫采购；矿山库存维持低位支撑报价</li>
+        </ul>
         <br>
         <p><strong>高硫主焦煤涨幅领先（+31%）的深层逻辑：</strong></p>
-        <p><strong>（1）价格基数效应</strong>：高硫主焦煤（S≤2.0%）2025年底价格基数低（约600-700元/吨），相同绝对涨幅下，百分比涨幅更大。低硫主焦煤（S≤0.6%）基数较高（约1,450元/吨），涨幅相对温和。</p>
-        <p><strong>（2）供应收缩更严重</strong>：2025年山西停产煤矿中，高硫矿井占比更高（柳林寨崖底S≤2.2%、孝义兑镇S≤3.0%等）。低硫优质矿井（如安泽、离柳）受影响相对较小。供应收缩 → 价格弹性更大。</p>
-        <p><strong>（3）下游降本驱动</strong>：钢厂利润承压（盈利率63.2%），主动优化配煤成本。高硫主焦煤性价比突出（价格低、热强度足够），配比从15-20%提升至25-30%。需求增加 → 价格上涨。</p>
-        <p><strong>（4）进口替代有限</strong>：美国高硫主焦煤进口政策收紧，国内高硫煤替代需求增加。而低硫主焦煤的进口替代来源更多（蒙古、澳洲），价格波动相对平缓。</p>
-        <p><strong>（5）价格传导滞后</strong>：低硫主焦煤价格受长协合同约束，调整频率低。高硫主焦煤以现货交易为主，价格对市场变化的反应更灵敏、涨幅更猛。</p>
-        <br>
-        <p><strong>数据验证</strong>：据MySteel数据，2026年Q1高硫主焦煤从650元/吨涨至850元/吨（+31%），同期低硫主焦煤从1,450元/吨涨至1,700元/吨（+17%）。价差从800元/吨收窄至850元/吨，反映配煤成本差异的收敛。</p>
-        <br>
-        <h3 id="section-11-2026年6月最新价格">2026年6月最新价格</h3>
-        <br>
-        <p>安泽低硫主焦煤（6月1日）：1,800元/吨，5月单月涨幅140元/吨。</p>
-        <br>
-        <p>数据来源：<a href="https://finance.sina.com.cn/wm/2026-06-02/doc-inhzzivn3126601.shtml" target="_blank">我的钢铁网（Mysteel）月报（2026年6月2日）</a></p>
-        <br>
-        <hr style='margin:30px 0;'>
-        <br>
-        <h3 id="section-12-关联参考钢厂生产数据mysteel">关联参考：钢厂生产数据（Mysteel）</h3>
-        <br>
-        <p>截至2026年5月最新数据：</p>
         <ul>
-            <li>日均铁水产量：<strong>240.81万吨</strong>（环比增加1.48万吨）</li>
+            <li><strong>价格基数效应</strong>：高硫主焦煤2025年底价格基数低（约600-700元/吨），涨幅百分比更大</li>
+            <li><strong>供应收缩更严重</strong>：2025年山西停产煤矿中高硫矿井占比更高，供应缺口更大</li>
+            <li><strong>下游降本驱动</strong>：钢厂利润承压下，高硫主焦煤性价比突显，配比从15-20%提升至25-30%</li>
+            <li><strong>进口替代有限</strong>：美国高硫主焦煤进口政策收紧，国内替代需求增加</li>
+            <li><strong>价格传导滞后</strong>：低硫主焦煤受长协合同约束，调整频率低；高硫以现货交易为主，对市场反应更灵敏</li>
         </ul>
+        <br>
+        <p><strong>数据验证</strong>：2026年Q1高硫主焦煤从650元/吨涨至850元/吨（+31%），同期低硫主焦煤从1,450元/吨涨至1,700元/吨（+17%），价差从800元/吨收窄至850元/吨。</p>
+        <br>
+        <p><strong>钢厂生产参考（Mysteel，截至2026年5月）：</strong></p>
         <ul>
-            <li>钢厂盈利率：<strong>63.2%</strong></li>
+            <li>日均铁水产量：<strong>240.81万吨</strong>（环比+1.48万吨），维持238万吨以上高位</li>
+            <li>钢厂盈利率：<strong>63.2%</strong>，盈利改善支撑原料采购</li>
         </ul>
-        <ul>
-            <li>钢厂铁水产量维持在238万吨以上，为焦煤需求提供刚性支撑</li>
-        </ul>
+        <br>
+        <p class="data-source">✅ 数据来源：MySteel我的钢铁网（官网/APP/公众号每日更新） | <a href="https://finance.sina.com.cn/wm/2026-06-02/doc-inhzzivn3126601.shtml" target="_blank">MySteel月报</a></p>
+        </div>
         <br>
         <h2 id="ch6">六、主焦煤价格与钢厂铁水产量关联性分析</h2>
         <br>
+        <div class="detail-card">
         <h3 id="section-13-价格与下游需求关联分析">价格与下游需求关联分析</h3>
         <br>
         <p>主焦煤作为钢铁生产的重要原料，其价格走势与钢厂生产活动（以铁水产量为代表）存在密切关联。本节基于我的钢铁网（Mysteel）公开数据，通过叠加分析2024-2026年主焦煤价格与钢厂日均铁水产量数据，揭示两者之间的关联关系。</p>
@@ -742,6 +427,7 @@
         <ul>
             <li>结构性矛盾突出：优质低硫主焦煤价格韧性更强</li>
         </ul>
+        </div>
         <br>
         <hr style='margin:30px 0;'>
         <br>
@@ -749,6 +435,7 @@
         
         <h2 id="ch7">七、山西低硫主焦煤矿井生产现状核查（2026年6月）</h2>
         <br>
+        <div class="detail-card">
         <blockquote>**数据时间**：2026年6月16-17日<br>
 **数据来源**：MySteel我的钢铁网实时价格行情</blockquote>
         <br>
@@ -1300,6 +987,7 @@
             <li><strong>核心指标</strong>：硫含量S≤0.5%的矿井资源稀缺，价格弹性大</li>
             <li><strong>风险提示</strong>：停产矿井复产进度不确定，供应紧张可能持续</li>
         </ol>
+        </div>
         <br>
         <hr style='margin:30px 0;'>
         <br>
@@ -2203,5 +1891,112 @@
 <div class="read-progress" aria-hidden="true"></div>
 <button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
     <script src="assets/app.js"></script>
+    <script>
+    // 图表1: 中国炼焦煤储量分省分布 - 圆环图
+    (function() {
+        var ctx1 = document.getElementById('reserveChart');
+        if (ctx1) {
+            ctx1 = ctx1.getContext('2d');
+            new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['山西', '安徽', '贵州', '黑龙江', '河北', '其他省份'],
+                    datasets: [{
+                        data: [1400, 350, 300, 200, 150, 358],
+                        backgroundColor: ['#185FA5','#2E86C1','#5DADE2','#85C1E9','#AED6F1','#D6EAF8'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        title: { display: true, text: '中国炼焦煤探明储量分省分布（亿吨）' }
+                    }
+                }
+            });
+        }
+    })();
+
+    // 图表2: 2025年中国炼焦煤进口来源分布 - 水平柱状图
+    (function() {
+        var ctx2 = document.getElementById('importChart');
+        if (ctx2) {
+            ctx2 = ctx2.getContext('2d');
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['蒙古', '俄罗斯', '澳大利亚', '美国', '加拿大', '其他'],
+                    datasets: [{
+                        label: '2025年进口量（万吨）',
+                        data: [5800, 2800, 1800, 800, 500, 500],
+                        backgroundColor: '#185FA5',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: { x: { title: { display: true, text: '万吨' } } }
+                }
+            });
+        }
+    })();
+
+    // 图表3: 2024-2026年各煤种价格走势 - 折线图
+    (function() {
+        var ctx3 = document.getElementById('priceChart');
+        if (ctx3) {
+            ctx3 = ctx3.getContext('2d');
+            new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: ['2024年均', '2025H1', '2025年11月高', '2025年12月', '2026年4月', '2026年6月'],
+                    datasets: [
+                        {
+                            label: '低硫主焦煤(安泽)',
+                            data: [1972, 1000, 1800, 1380, 1525, 2040],
+                            borderColor: '#185FA5',
+                            backgroundColor: 'rgba(24,95,165,0.1)',
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 4
+                        },
+                        {
+                            label: '中硫主焦煤',
+                            data: [1800, 900, 1400, 1200, 1416, 1823],
+                            borderColor: '#5DADE2',
+                            backgroundColor: 'rgba(93,173,226,0.1)',
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 4
+                        },
+                        {
+                            label: 'MySteel国产指数',
+                            data: [1757, 936.5, 1407.1, 1200, 1600, 1986.1],
+                            borderColor: '#1B4F72',
+                            backgroundColor: 'rgba(27,79,114,0.05)',
+                            tension: 0.3,
+                            borderWidth: 2,
+                            borderDash: [5,5],
+                            pointRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'bottom' },
+                        title: { display: true, text: '2024-2026年炼焦煤价格走势（元/吨）' }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: '元/吨' } }
+                    }
+                }
+            });
+        }
+    })();
+</script>
 </body>
 </html>
