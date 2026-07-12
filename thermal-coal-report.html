@@ -65,6 +65,7 @@
         
         <div class="toc">
             <h2 id="ch1">第1章 行业概况</h2>
+        <div class="detail-card">
         
         <h3>1.1 动力煤定义与分类</h3>
         
@@ -90,8 +91,10 @@
             <li><strong>区域集中</strong>：晋陕蒙新四省产量占全国70%+</li>
             <li><strong>长协占比高</strong>：重点电企长协签约率≥75%</li>
         </ul>
+        </div>
         
         <h2 id="ch1-5">第1.5章 数据溯源与口径说明</h2>
+        <div class="detail-card">
         
         <h3>1.5.1 数据来源</h3>
         <table>
@@ -208,8 +211,10 @@
             </ul>
         </div>
         </div>
+        </div>
         
         <h2 id="ch2">第2章 储量与资源分布</h2>
+        <div class="detail-card">
         
         <h3>2.1 全国储量概况</h3>
         
@@ -259,8 +264,10 @@
             <li>新疆储量巨大但开发程度低（运输距离是瓶颈）</li>
             <li>优质动力煤（低硫、高发热量）主要集中在陕北、蒙西</li>
         </ul>
+        </div>
         
         <h2 id="ch3">第3章 生产与供应</h2>
+        <div class="detail-card">
         
         <h3>3.1 全国产量数据</h3>
         
@@ -365,8 +372,10 @@
             <li>新疆产量增速最快（基数低、政策扶持）</li>
             <li>中东部省份产量持续下降（资源枯竭、去产能）</li>
         </ul>
+        </div>
         
         <h2 id="ch4">第4章 价格分析</h2>
+        <div class="detail-card">
         
         <h3>4.1 价格走势（2024-2026年）</h3>
         
@@ -488,8 +497,10 @@
             <li><strong>2026年回升</strong>：各热值煤价均显著回升，5500大卡和6000大卡涨幅最大（18%+）</li>
             <li><strong>标杆作用</strong>：5500大卡是市场主流标的，秦皇岛港平仓价是行业风向标</li>
         </ul>
+        </div>
         
         <h2 id="ch5">第5章 消费与需求</h2>
+        <div class="detail-card">
         
         <h3>5.1 分行业消费需求</h3>
         <table>
@@ -598,8 +609,10 @@
             </tbody>
         </table>
         <p><strong>⚠️ 数据解读：</strong>2025年产量增、消费降，主要受新能源替代和宏观经济转型影响，库存消耗较大。</p>
+        </div>
         
         <h2 id="ch6">第6章 运输与物流</h2>
+        <div class="detail-card">
         <p>动力煤运输呈现"西煤东运"、"北煤南运"格局，主要依赖铁路+港口中转。</p>
         
         <h3>6.1 "西煤东运"主要线路</h3>
@@ -713,12 +726,15 @@
             </tbody>
         </table>
         <p><strong>核心结论：</strong>疆煤外运成本比晋陕蒙高200-250元/吨，制约其市场竞争力，主要服务西北本地市场。</p>
+        </div>
         
         <h2 id="ch7">第7章 政策法规</h2>
-        <p>保供稳价、环保政策对行业影响深远。</p>
+        <div class="detail-card">
+<p>保供稳价、环保政策对行业影响深远。</p>
+        </div>
         
         
-    
+
     
         <h2 id="ch8">第8章 主要企业关键指标对照</h2>
     <div class="detail-card">
@@ -772,7 +788,16 @@
     <h4>兰花科创 (600123.SH)</h4>
     <p>山西煤炭+煤化工企业，2025年产量1,600万吨（+6.7%）。营业收入81亿（-30.4%），毛利率15.0%（-10pct），净利润-5.40亿（亏损），为12家动力煤企业中唯一的亏损标的。扭亏依赖煤价显著回升。</p>
 
-
+<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+  <div class="chart-container">
+    <div class="chart-title">2025年12家动力煤企业净利润对比（亿元）</div>
+    <div class="chart-wrapper"><canvas id="profitChart2025"></canvas></div>
+  </div>
+  <div class="chart-container">
+    <div class="chart-title">2024-2025年净利润变化</div>
+    <div class="chart-wrapper"><canvas id="profitChangeChart"></canvas></div>
+  </div>
+</div>
 
         <h2 id="ch9">第9章 投资参考与数据附录</h2>
 
@@ -858,5 +883,111 @@
 <div class="read-progress" aria-hidden="true"></div>
 <button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
     <script src="assets/app.js"></script>
+<script>
+(function() {
+  var c = document.getElementById('reserveChart');
+  if (!c) return;
+  new Chart(c.getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: ['山西', '陕西', '内蒙古', '新疆', '其他省份'],
+      datasets: [{
+        data: [25, 20, 16, 12, 27],
+        backgroundColor: ['#2C3E50','#34495E','#5D6D7E','#85929E','#BDC3C7'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' },
+        title: { display: true, text: '中国动力煤探明储量分省占比（%）' }
+      }
+    }
+  });
+})();
+(function() {
+  var c = document.getElementById('priceChart');
+  if (!c) return;
+  new Chart(c.getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: ['2019','2020','2021','2022','2023','2024','2025'],
+      datasets: [{
+        label: '秦皇岛港5500大卡（元/吨）',
+        data: [587, 578, 858, 1265, 972, 849, 700],
+        borderColor: '#34495E',
+        backgroundColor: 'rgba(52,73,94,0.08)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 5,
+        pointBackgroundColor: '#34495E'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { title: { display: true, text: '秦皇岛港5500大卡动力煤年均价走势（2019-2025）' } },
+      scales: { y: { title: { display: true, text: '元/吨' }, beginAtZero: false } }
+    }
+  });
+})();
+(function() {
+  var c = document.getElementById('heatValueChart');
+  if (!c) return;
+  new Chart(c.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['4500大卡', '5000大卡', '5500大卡', '5800大卡'],
+      datasets: [
+        { label: '2024年均价', data: [580, 720, 849, 920], backgroundColor: '#34495E' },
+        { label: '2025年均价', data: [460, 580, 700, 770], backgroundColor: '#85929E' }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { title: { display: true, text: '不同热值动力煤价格对比（元/吨）' } },
+      scales: { y: { title: { display: true, text: '元/吨' } } }
+    }
+  });
+})();
+(function() {
+  var c = document.getElementById('profitChart2025');
+  if (!c) return;
+  new Chart(c.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['中国神华','陕西煤业','中煤能源','兖矿能源','广汇能源','华阳股份','山煤国际','新集能源','淮北矿业','平煤股份','兰花科创','神火股份'],
+      datasets: [{
+        label: '2025年归母净利（亿元）',
+        data: [528.49, 167.65, 178.84, 83.81, 13.45, 17.03, 11.66, 21.36, 15.06, 2.31, -5.40, 40.05],
+        backgroundColor: '#34495E'
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: { legend: { display: false } }
+    }
+  });
+})();
+(function() {
+  var c = document.getElementById('profitChangeChart');
+  if (!c) return;
+  new Chart(c.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['中国神华','陕西煤业','中煤能源','兖矿能源','广汇能源','华阳股份','山煤国际','新集能源','淮北矿业','平煤股份','兰花科创','神火股份'],
+      datasets: [
+        { label: '2024', data: [586.6, null, 193.1, null, null, 22.3, 22.7, 23.7, 48.6, 23.6, null, null], backgroundColor: '#BDC3C7' },
+        { label: '2025', data: [528.49, 167.65, 178.84, 83.81, 13.45, 17.03, 11.66, 21.36, 15.06, 2.31, -5.40, 40.05], backgroundColor: '#34495E' }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { title: { display: true, text: '2024-2025年净利润对比（亿元）' } }
+    }
+  });
+})();
+</script>
 </body>
 </html>
