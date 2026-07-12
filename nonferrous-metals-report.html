@@ -125,6 +125,7 @@
         </ol>
 
         <h2 id="ch3">第三章：黄金（Au）研究</h2>
+        <div class="detail-card">
         
         <h3>3.1 黄金基本属性</h3>
         <div class="box box--info">
@@ -171,7 +172,7 @@
                 <td>-755</td>
             </tr>
             <tr>
-                <td>2025E</td>
+                <td>2025 ✅</td>
                 <td>3,680</td>
                 <td>1,300</td>
                 <td>4,850</td>
@@ -208,8 +209,10 @@
         <tr><td>2025</td><td>3,431</td><td>+43.8%</td></tr>
         </table>
         <p>✅ 数据来源：LBMA / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch4">第四章：白银（Ag）研究</h2>
+        <div class="detail-card">
         
         <h3>4.1 白银基本属性</h3>
         <div class="box box--info">
@@ -247,8 +250,10 @@
         <tr><td>2025</td><td>33.89</td><td>+18.9%</td></tr>
         </table>
         <p>✅ 数据来源：LBMA / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch5">第五章：铜（Cu）研究</h2>
+        <div class="detail-card">
         
         <h3>5.1 铜基本属性</h3>
         <div class="box box--info">
@@ -325,8 +330,10 @@
         <tr><td>2025</td><td>9,708</td><td>+4.4%</td></tr>
         </table>
         <p>✅ 数据来源：LME / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch6">第六章：锂（Li）研究</h2>
+        <div class="detail-card">
         
         <h3>6.1 锂基本属性</h3>
         <div class="box box--info">
@@ -402,8 +409,10 @@
         <tr><td>2025</td><td>7.48</td><td>-17.3%</td></tr>
         </table>
         <p>✅ 数据来源：上海有色网 / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch7">第七章：铝（Al）研究</h2>
+        <div class="detail-card">
         
         <h3>7.1 铝基本属性</h3>
         <div class="box box--info">
@@ -478,8 +487,10 @@
         <tr><td>2025</td><td>20,700</td><td>+4.0%</td></tr>
         </table>
         <p>✅ 数据来源：SHFE / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch8">第八章：锡（Sn）研究</h2>
+        <div class="detail-card">
         
         <h3>8.1 锡基本属性</h3>
         <div class="box box--info">
@@ -555,6 +566,7 @@
         <tr><td>2025</td><td>33,500</td><td>+10.2%</td></tr>
         </table>
         <p>✅ 数据来源：LME / 东方财富 / 各公司年报</p>
+        </div>
 
         <h2 id="ch9">第九章：相关公司深度报告</h2>
         <div class="related-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;">
@@ -684,5 +696,93 @@
 <div class="read-progress" aria-hidden="true"></div>
 <button class="to-top" aria-label="回到顶部" title="回到顶部">↑</button>
     <script src="assets/app.js"></script>
+    <script>
+    // === goldPriceChart：黄金年均价走势 ===
+    (function() {
+        var c1 = document.getElementById('goldPriceChart');
+        if (c1) {
+            var ctx1 = c1.getContext('2d');
+            new Chart(ctx1, {
+                type: 'line',
+                data: {
+                    labels: ['2019','2020','2021','2022','2023','2024','2025'],
+                    datasets: [{
+                        label: 'LBMA黄金年均价（$/盎司）',
+                        data: [1393, 1770, 1799, 1802, 1941, 2386, 3431],
+                        borderColor: '#C9952B',
+                        backgroundColor: 'rgba(201,149,43,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#C9952B'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: true }, title: { display: true, text: 'LBMA黄金年均价走势（2019-2025）' } },
+                    scales: { y: { title: { display: true, text: '美元/盎司' }, beginAtZero: false } }
+                }
+            });
+        }
+    })();
+    </script>
+    <script>
+    // === goldSilverRatioChart：金银比价走势 ===
+    (function() {
+        var c2 = document.getElementById('goldSilverRatioChart');
+        if (c2) {
+            var ctx2 = c2.getContext('2d');
+            new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['2019','2020','2021','2022','2023','2024','2025'],
+                    datasets: [{
+                        label: '金银比价',
+                        data: [85.9, 85.8, 71.4, 82.8, 83.0, 83.7, 101.2],
+                        borderColor: '#8E44AD',
+                        backgroundColor: 'rgba(142,68,173,0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { title: { display: true, text: '金银比价走势（2019-2025）' } },
+                    scales: { y: { title: { display: true, text: '比值' }, beginAtZero: false } }
+                }
+            });
+        }
+    })();
+    </script>
+    <script>
+    // === copperPriceChart：铜价走势 ===
+    (function() {
+        var c3 = document.getElementById('copperPriceChart');
+        if (c3) {
+            var ctx3 = c3.getContext('2d');
+            new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: ['2019','2020','2021','2022','2023','2024','2025'],
+                    datasets: [{
+                        label: 'LME铜年均价（$/吨）',
+                        data: [6011, 6181, 9292, 8785, 8496, 9299, 9708],
+                        borderColor: '#E67E22',
+                        backgroundColor: 'rgba(230,126,34,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#E67E22'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { title: { display: true, text: 'LME铜年均价走势（2019-2025）' } },
+                    scales: { y: { title: { display: true, text: '美元/吨' }, beginAtZero: false } }
+                }
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
