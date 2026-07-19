@@ -51,6 +51,7 @@ COMPANIES = [
     {"key": "shougang",        "name": "首钢资源", "a": None,     "h": "00639"},
     {"key": "xingye-yintin",   "name": "兴业银锡", "a": "000426", "h": None},
     {"key": "yankuang-energy", "name": "兖矿能源", "a": "600188", "h": "01171"},
+    {"key": "yunnan-aluminum", "name": "云铝股份", "a": "000807", "h": None},
     {"key": "zangge-mining",   "name": "藏格矿业", "a": "000408", "h": None},
     {"key": "zhaojin-mining",  "name": "招金矿业", "a": None,     "h": "01818"},
     {"key": "zijin-mining",    "name": "紫金矿业", "a": "601899", "h": "02899"},
