@@ -375,6 +375,19 @@ tr.total > td:first-child { color: var(--brand-ink); }
 /* ---------- 报告两栏布局 (Report Layout) ----------
    桌面端：左侧 sticky 目录 + 右侧主内容卡片；
    移动端（≤980px）自动退化为单列，目录回到内容顶部。 */
+/* ---------- 报告表格防字符级折行 ---------- */
+.report-layout__main table {
+  table-layout: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.report-layout__main table th,
+.report-layout__main table td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+   桌面端：左侧 sticky 目录 + 右侧主内容卡片；
+   移动端（≤980px）自动退化为单列，目录回到内容顶部。 */
 .report-layout {
   max-width: var(--maxw);
   margin: 24px auto 0;
