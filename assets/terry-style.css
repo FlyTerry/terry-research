@@ -386,8 +386,6 @@ tr.total > td:first-child { color: var(--brand-ink); }
   word-break: break-word;
   overflow-wrap: break-word;
 }
-   桌面端：左侧 sticky 目录 + 右侧主内容卡片；
-   移动端（≤980px）自动退化为单列，目录回到内容顶部。 */
 .report-layout {
   max-width: var(--maxw);
   margin: 24px auto 0;
