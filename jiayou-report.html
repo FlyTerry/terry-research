@@ -1182,31 +1182,31 @@
 
 <h2 id="ch7">第七章 双轮驱动敏感性分析</h2>
     <div class="summary-box">
-        <h3>嘉友的双变量暴露：焦煤价格（中蒙）与铜矿物流量（非洲）是两个独立变量，单一焦煤价格模拟已无法反映公司盈利结构。</h3>
+        <h3>嘉友的双变量暴露：焦煤量价（中蒙）与铜矿物流量（非洲）是两个独立变量。焦煤进口量价高度正相关（历史相关性>0.8），因此焦煤端按量价复合情景模拟。</h3>
     </div>
     
-    <h3>5.1 蒙古焦煤价格敏感性（贸易板块）</h3>
+    <h3>5.1 蒙古焦煤量价敏感性（贸易板块）</h3>
     <div class="warning">
         <p><strong>⚠️ 测算前提：</strong></p>
         <ul>
             <li><strong>基准情景（2025年报口径）</strong>：供应链贸易收入51.74亿元，毛利5.42亿元，毛利率10.47%。焦煤均价980元/吨，贸易量约700万吨</li>
-            <li><strong>关键假设</strong>：蒙古焦煤价格变动仅影响贸易板块毛利，跨境物流和陆港业务不受焦煤价格直接影响（分属不同客户群和商品类）</li>
-            <li><strong>2025年报敏感性验证</strong>：焦煤均价从2024年约1,180元/吨降至2025年980元/吨（-17%），贸易毛利从7.65亿降至5.42亿（-29.1%），价格弹性约1.7</li>
+            <li><strong>关键假设</strong>：蒙古焦煤业务的量价高度正相关（进口量与价格历史相关性>0.8，量价同向变动），因此按量价复合情景模拟。跨境物流和陆港业务不受焦煤量价直接影响</li>
+            <li><strong>2025年报实际验证</strong>：焦煤均价约-17%、进口量同比亦有回落，双重压力下贸易毛利从7.65亿降至5.42亿（-29.1%）</li>
         </ul>
     </div>
     
-    <h4>焦煤价格变动对贸易板块的影响</h4>
+    <h4>焦煤量价变动对贸易板块的影响</h4>
     <table>
-        <tr><th>焦煤价格变动</th><th>均价（元/吨）</th><th>贸易毛利（亿元）</th><th>归母净利润（亿元）</th><th>净利润变动</th></tr>
-        <tr><td>+30%</td><td>1,274</td><td>9.0</td><td>14.5</td><td class="positive">+27.1%</td></tr>
+        <tr><th>焦煤量价变动</th><th>参考均价（元/吨）</th><th>贸易毛利（亿元）</th><th>归母净利润（亿元）</th><th>净利润变动</th></tr>
+        <tr><td>+30%（量价双升）</td><td>1,274</td><td>9.0</td><td>14.5</td><td class="positive">+27.1%</td></tr>
         <tr><td>+20%</td><td>1,176</td><td>7.5</td><td>13.2</td><td class="positive">+15.7%</td></tr>
         <tr><td>+10%</td><td>1,078</td><td>6.0</td><td>11.9</td><td class="positive">+4.3%</td></tr>
         <tr style="background:#e8f5e9;"><td><strong>基准（2025年实际）</strong></td><td><strong>980</strong></td><td><strong>5.42</strong></td><td><strong>11.41</strong></td><td>-</td></tr>
         <tr><td>-10%</td><td>882</td><td>4.8</td><td>10.9</td><td class="negative">-4.5%</td></tr>
         <tr><td>-20%</td><td>784</td><td>4.2</td><td>10.4</td><td class="negative">-8.9%</td></tr>
-        <tr><td>-30%</td><td>686</td><td>3.6</td><td>9.9</td><td class="negative">-13.2%</td></tr>
+        <tr><td>-30%（量价双杀）</td><td>686</td><td>3.6</td><td>9.9</td><td class="negative">-13.2%</td></tr>
     </table>
-    <p><strong>焦煤价格敏感性结论：</strong>焦煤价格弹性约0.8-0.9（价格±10%→净利润±4.3-4.5%），低于旧版模型（旧版4.2），因旧版未考虑陆港利润（3.66亿，不受焦煤影响）的缓冲作用。陆港每增长1亿毛利≈稀释焦煤价格敏感度约8个百分点。</p>
+    <p><strong>焦煤量价敏感性结论：</strong>焦煤量价复合弹性约0.8-0.9（量价±10%→净利润±4.3-4.5%），低于纯贸易公司因陆港利润（3.66亿，不受焦煤影响）提供缓冲。陆港每增长1亿毛利≈稀释焦煤敏感度约8个百分点。</p>
     
     <h3>5.2 铜矿物流量敏感性（非洲板块）——新增</h3>
     <div class="warning">
@@ -1229,20 +1229,20 @@
     </table>
     <p><strong>铜矿物流量敏感性结论：</strong>弹性系数约0.7-0.8。但2025年的实际验证更重要——卡莫阿矿震导致产量从52-58万吨降至38.9万吨，嘉友营收-4.3%、净利-10.6%。</p>
     
-    <h3>5.3 双变量矩阵：焦煤价格 × 铜矿物流量</h3>
+    <h3>5.3 双变量矩阵：焦煤（量+价）× 铜矿物流量</h3>
+    <p><strong>下表展示两种核心驱动因素同时变动时，归母净利润（亿元）的交叉结果。</strong>基准（11.41亿）= 焦煤均价980元/吨 + 卡萨日通车950辆。其中焦煤情景已隐含量价同向变动（焦煤进口量与价格历史相关性>0.8），铜矿情景仅变动物流量。</p>
     <table>
-        <tr><th colspan="2" rowspan="2" style="background:#ddd;">归母净利润（亿元）</th><th colspan="3" style="background:#fcebeb;">铜矿物流量（非洲）</th></tr>
-        <tr><th style="background:#fcebeb;">悲观（-30%）</th><th style="background:#e8f5e9;">基准</th><th style="background:#e8f5e9;">乐观（+30%）</th></tr>
-        <tr><th rowspan="3" style="background:#fcebeb;">焦煤<br>价格<br>（中蒙）</th><th style="background:#fcebeb;">悲观（930→686）</th><td style="background:#fcebeb;">6.3</td><td>7.7</td><td>10.9</td></tr>
-        <tr><th style="background:#e8f5e9;">基准（980）</th><td>8.8</td><td style="background:#e8f5e9;"><strong>11.4</strong></td><td class="positive">14.0</td></tr>
-        <tr><th style="background:#e8f5e9;">乐观（980→1,274）</th><td>10.5</td><td>13.4</td><td class="positive"><strong>16.0</strong></td></tr>
+        <tr><th></th><th>焦煤↓30%<br>（量价双杀）</th><th>焦煤基准<br>（均价980）</th><th>焦煤↑30%<br>（量价双升）</th></tr>
+        <tr><th>铜矿↓30%</th><td style="background:#FFCDD2;">6.3</td><td style="background:#FFF3E0;">8.8</td><td style="background:#FFF9C4;">10.5</td></tr>
+        <tr><th>铜矿基准</th><td style="background:#FFF3E0;">7.7</td><td style="background:#E8F5E9; font-weight:bold; font-size:1.1em;">11.4</td><td class="positive" style="background:#FFF9C4;">13.4</td></tr>
+        <tr><th>铜矿↑30%</th><td style="background:#FFF9C4;">10.9</td><td class="positive" style="background:#C8E6C9;">14.0</td><td class="positive" style="background:#A5D6A7; font-weight:bold;"><strong>16.0</strong></td></tr>
     </table>
     <p><strong>双变量交叉分析核心发现：</strong></p>
     <ul>
         <li><strong>最差情景（焦煤-30% + 铜矿-30%）</strong>——净利润6.3亿元，较基准-45%。但此情景要求中蒙和非洲同时发生系统性风险（概率较低）</li>
         <li><strong>最好情景（焦煤+30% + 铜矿+30%）</strong>——净利润16.0亿元，较基准+40%。同样要求双轮同时超预期</li>
         <li><strong>2026Q1已展现"不对称利好"</strong>：焦煤弱势但铜矿物流量+陆港收费增长，净利润不降反升</li>
-        <li><strong>陆港占比每提升10% ≈ 整体弹性系数降低约1.5倍</strong>——这是嘉友商业模式从"焦煤价格贝塔"向"基础设施阿尔法"演化的核心逻辑</li>
+        <li><strong>陆港占比每提升10% ≈ 整体弹性系数降低约1.5倍</strong>——这是嘉友商业模式从"焦煤量价贝塔"向"基础设施阿尔法"演化的核心逻辑</li>
     </ul>
     
     <h3>综合评价</h3>
@@ -1333,14 +1333,14 @@
     
     // 2.2 资产负债
     
-    // 5.1 焦煤价格敏感性图表
+    // 5.1 焦煤量价敏感性图表
     const sensitivityCtx = document.getElementById('sensitivityChart').getContext('2d');
     new Chart(sensitivityCtx, {
         type: 'line',
         data: {
             labels: ['-30%', '-20%', '-10%', '基准', '+10%', '+20%', '+30%'],
             datasets: [{
-                label: '焦煤价格变动→净利润（亿元）',
+                label: '焦煤量价变动→净利润（亿元）',
                 data: [9.9, 10.4, 10.9, 11.41, 11.9, 13.2, 14.5],
                 borderColor: '#0F6E56',
                 backgroundColor: 'rgba(15, 110, 86, 0.1)',
@@ -1350,7 +1350,7 @@
         },
         options: {
             responsive: true,
-            plugins: { title: { display: true, text: '蒙古焦煤价格变动→归母净利润（2025年报口径，已含陆港缓冲）' } },
+            plugins: { title: { display: true, text: '蒙古焦煤量价变动→归母净利润（2025年报口径，已含陆港缓冲）' } },
             scales: { y: { title: { display: true, text: '归母净利润（亿元）' } } }
         }
     });
