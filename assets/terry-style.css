@@ -401,15 +401,6 @@ tr.total > td:first-child { color: var(--brand-ink); }
   min-width: 0;
 }
 
-/* 表格防塌缩 */
-.report-layout__main > * {
-  max-width: 100%;
-}
-.report-layout__main table {
-  table-layout: auto;
-  overflow-wrap: break-word;
-}
-
 /* 侧边目录（桌面 sticky） */
 .toc--side {
   margin: 0;
