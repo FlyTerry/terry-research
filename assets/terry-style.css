@@ -378,13 +378,12 @@ tr.total > td:first-child { color: var(--brand-ink); }
 /* ---------- 报告表格防字符级折行 ---------- */
 .report-layout__main table {
   table-layout: auto;
-  word-break: break-word;
   overflow-wrap: break-word;
 }
 .report-layout__main table th,
 .report-layout__main table td {
-  word-break: break-word;
   overflow-wrap: break-word;
+  white-space: normal;
 }
 .report-layout {
   max-width: var(--maxw);
